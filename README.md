@@ -11,4 +11,4 @@ Here are a few of my favorite graphics, in no particular order:
 
 
 
-It's pretty messy, but here it all is for posterity.
+It's pretty messy, but here it all is for posterity (except a couple big ones, Github didn't accept them).
