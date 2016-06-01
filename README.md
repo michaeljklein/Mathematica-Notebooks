@@ -5,7 +5,7 @@ This is a collection of Mathematica notebooks from the last several years,
 mostly consisting of scratch work, prototypes, and playing around.
 
 I have no idea how much stuff is really in this collection, but a quick `grep` 
-gives at least 32,780 cells.
+gives at least 31,888 cells.
 
 Here are a few of my favorite graphics, in no particular order:
 
