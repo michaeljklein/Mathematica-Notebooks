@@ -9,6 +9,12 @@ gives at least 32,780 cells.
 
 Here are a few of my favorite graphics, in no particular order:
 
-
+![](http://imgur.com/1HbylJK "Nice corners")
+![](http://imgur.com/Jo65wD9 "Treeish fractal")
+![](http://imgur.com/MvHiQIH "Fancy fractal")
+![](http://imgur.com/4YOPNcV "Looks recursive, but is it?")
+![](http://imgur.com/8J64LJf "Random disks")
+![](http://imgur.com/xTof1ud "Random jellyfish")
+![](http://imgur.com/q7LHEwk "Column")
 
 It's pretty messy, but here it all is for posterity (except a couple big ones, Github didn't accept them).
