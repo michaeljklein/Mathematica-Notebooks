@@ -1,0 +1,4268 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    164598,       4258]
+NotebookOptionsPosition[    162328,       4177]
+NotebookOutlinePosition[    162683,       4193]
+CellTagsIndexPosition[    162640,       4190]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"1", "\[Rule]", "123"}], ",", 
+  RowBox[{"2", "\[Rule]", "1"}], ",", 
+  RowBox[{"3", "\[Rule]", "\"\<STOP\>\""}]}]], "Input",
+ CellChangeTimes->{{3.5687368326663103`*^9, 3.56873687768871*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"init", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "1", ",", "1"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tt2", "[", "x_", "]"}], ":=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {
+         RowBox[{"{", 
+          RowBox[{"2", ",", "1", ",", "3"}], "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "1"}]},
+        {
+         RowBox[{"{", "1", "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "2"}]},
+        {
+         RowBox[{"{", "0", "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "3"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t2", "[", "x_", "]"}], ":=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {
+         RowBox[{"Delete", "[", 
+          RowBox[{
+           RowBox[{"Delete", "[", 
+            RowBox[{
+             RowBox[{"Flatten", "[", 
+              RowBox[{"Append", "[", 
+               RowBox[{"x", ",", 
+                RowBox[{"tt2", "[", "x", "]"}]}], "]"}], "]"}], ",", "1"}], 
+            "]"}], ",", "1"}], "]"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[NotEqual]", "0"}]},
+        {
+         RowBox[{"{", "0", "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "0"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}]}], "Input",
+ CellChangeTimes->{{3.5687368813568*^9, 3.568736961801159*^9}, {
+  3.568737003063252*^9, 3.5687370915109873`*^9}, {3.568737139370721*^9, 
+  3.568737158096429*^9}, {3.5687372951696587`*^9, 3.568737304526021*^9}, {
+  3.568737349729636*^9, 3.56873737505713*^9}, {3.568737411992612*^9, 
+  3.5687374412529*^9}, {3.568737519376033*^9, 3.56873758197722*^9}, {
+  3.568737676883379*^9, 3.568737686914991*^9}, {3.5687377269040422`*^9, 
+  3.568737733885865*^9}, {3.568737776010456*^9, 3.568737852815692*^9}, {
+  3.568737970870673*^9, 3.568737994886142*^9}, {3.568738028779942*^9, 
+  3.568738029873328*^9}, {3.568738064566966*^9, 3.568738065342638*^9}, {
+  3.568738245602055*^9, 3.568738253574182*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t2", "[", "init", "]"}]], "Input",
+ CellChangeTimes->{{3.5687373559691772`*^9, 3.5687373605945272`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"1", ",", "1"}], "}"}]], "Output",
+ CellChangeTimes->{{3.568737420312395*^9, 3.5687374432606792`*^9}, {
+   3.5687375690055437`*^9, 3.568737583513316*^9}, {3.568738033179039*^9, 
+   3.568738034608919*^9}, 3.568738191701388*^9, 3.568738255670988*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t2", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.5687381931630373`*^9, 3.568738199059216*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"2", ",", "1", ",", "3"}], "}"}]], "Output",
+ CellChangeTimes->{3.568738199487176*^9, 3.568738257792041*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t2", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.568738214366949*^9, 3.56873823247031*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"3", ",", "1"}], "}"}]], "Output",
+ CellChangeTimes->{{3.5687382329773607`*^9, 3.568738259851016*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t2", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.5687382610631733`*^9, 3.568738264391958*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "0", "}"}]], "Output",
+ CellChangeTimes->{3.568738264772669*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"t2", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.568738265937896*^9, 3.568738268231366*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "0", "}"}]], "Output",
+ CellChangeTimes->{3.568738268632133*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Nest", "[", 
+    RowBox[{"t2", ",", "init", ",", "i"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "5"}], "}"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ArrayPlot", "[", "%", "]"}]}], "Input",
+ CellChangeTimes->{{3.5687376418424883`*^9, 3.5687376658809643`*^9}, 
+   3.568737742376745*^9, 3.5687379489253397`*^9, 3.568738051595145*^9, {
+   3.5687382715687037`*^9, 3.568738277471898*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "1", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.568738271969648*^9, 3.5687382778711767`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGBgBWIQzcIAAx/syaMJ6aeX+bjAB/tQMHiKQRNrP0T9VXt0
+mjTzyXcfpe4HALv1V5Y=
+   "], {{0, 0}, {3, 5}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}}]], "Output",
+ CellChangeTimes->{{3.568738271969648*^9, 3.5687382778725224`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"init", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "1", ",", "2", ",", "2", ",", "2", ",", "2"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "1", ",", "1"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"B", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0", ",", "2", ",", "1"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tt2", "[", 
+   RowBox[{"x_", ",", "a_", ",", "b_"}], "]"}], ":=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {
+         RowBox[{"{", "0", "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "0"}]},
+        {"a", 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "1"}]},
+        {"b", 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "2"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t2", "[", "x_", "]"}], ":=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {
+         RowBox[{"Delete", "[", 
+          RowBox[{
+           RowBox[{"Flatten", "[", 
+            RowBox[{"Append", "[", 
+             RowBox[{"x", ",", 
+              RowBox[{"tt2", "[", 
+               RowBox[{"x", ",", "A", ",", "B"}], "]"}]}], "]"}], "]"}], ",", 
+           "1"}], "]"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[NotEqual]", "0"}]},
+        {
+         RowBox[{"{", "0", "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "0"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}]}], "Input",
+ CellChangeTimes->{{3.5687368813568*^9, 3.568736961801159*^9}, {
+  3.568737003063252*^9, 3.5687370915109873`*^9}, {3.568737139370721*^9, 
+  3.568737158096429*^9}, {3.5687372951696587`*^9, 3.568737304526021*^9}, {
+  3.568737349729636*^9, 3.56873737505713*^9}, {3.568737411992612*^9, 
+  3.5687374412529*^9}, {3.568737519376033*^9, 3.56873758197722*^9}, {
+  3.568737676883379*^9, 3.568737686914991*^9}, {3.5687377269040422`*^9, 
+  3.568737733885865*^9}, {3.568737776010456*^9, 3.568737852815692*^9}, {
+  3.568737970870673*^9, 3.568737994886142*^9}, {3.568738028779942*^9, 
+  3.568738029873328*^9}, {3.568738064566966*^9, 3.568738065342638*^9}, {
+  3.568738245602055*^9, 3.568738253574182*^9}, {3.5687383586612883`*^9, 
+  3.568738439027451*^9}, {3.568738522561187*^9, 3.56873861207731*^9}, {
+  3.568918085886036*^9, 3.5689181428150578`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Nest", "[", 
+    RowBox[{"t2", ",", "init", ",", "i"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "25"}], "}"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"ArrayPlot", "[", "%", "]"}]}], "Input",
+ CellChangeTimes->{{3.568738350835669*^9, 3.5687383513297997`*^9}, {
+  3.568738444447956*^9, 3.568738448239048*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "2", ",", "2", ",", "2", ",", "2", ",", "1", ",", "0", ",", "2",
+      ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "2", ",", "2", ",", "2", ",", "1", ",", "0", ",", "2", ",", "1",
+      ",", "1", ",", "2", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "2", ",", "2", ",", "1", ",", "0", ",", "2", ",", "1", ",", "1",
+      ",", "2", ",", "1", ",", "1", ",", "1", ",", "0", ",", "2", ",", "1"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "2", ",", "1", ",", "0", ",", "2", ",", "1", ",", "1", ",", "2",
+      ",", "1", ",", "1", ",", "1", ",", "0", ",", "2", ",", "1", ",", "1", 
+     ",", "0", ",", "2", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "2", ",", "1", ",", "0", ",", "2", ",", "1", ",", "1", ",", "2", ",", "1",
+      ",", "1", ",", "1", ",", "0", ",", "2", ",", "1", ",", "1", ",", "0", 
+     ",", "2", ",", "1", ",", "1", ",", "0", ",", "2", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "1", ",", "0", ",", "2", ",", "1", ",", "1", ",", "2", ",", "1", ",", "1",
+      ",", "1", ",", "0", ",", "2", ",", "1", ",", "1", ",", "0", ",", "2", 
+     ",", "1", ",", "1", ",", "0", ",", "2", ",", "1", ",", "1", ",", "0", 
+     ",", "2", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+    "0", ",", "2", ",", "1", ",", "1", ",", "2", ",", "1", ",", "1", ",", "1",
+      ",", "0", ",", "2", ",", "1", ",", "1", ",", "0", ",", "2", ",", "1", 
+     ",", "1", ",", "0", ",", "2", ",", "1", ",", "1", ",", "0", ",", "2", 
+     ",", "1", ",", "1", ",", "2", ",", "1", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}], ",", 
+   RowBox[{"{", "0", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.568918076663521*^9, 3.5689181443923273`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[RasterBox[CompressedData["
+1:eJzt1cENgkAQQNFNtAnjyUrswRJMPNuyJViCXLiQ4BJ1HEfeJoTDQ5aF/fFw
+vp4um9babjj2w7Ft47gfXzv3fs851xfnGa4vzvXFeUXXF+f64ryi64tzfXFe
+0fXFub44r+j64lxfnFd0fXGuL84rur441xfnFV1fnOuL84o+vW46Rr/NnJd6
+9P17nr1+8+fOH31/63/u2es3f+z80f9fUc+nv+8837/PH73/s/vqefb711/u
+/Nn799d9bix9/z3P/v5r7y97f63d58an+up59v7L7i/7+/NYf3d/RXt2f9nf
+h1f1Bw3GaLE=
+   "], {{0, 0}, {27, 25}}, {0, 1}],
+  Frame->Automatic,
+  FrameLabel->{None, None},
+  FrameTicks->{{None, None}, {None, None}}]], "Output",
+ CellChangeTimes->{{3.568918076663521*^9, 3.568918144395563*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"init", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "1", ",", "1"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"tt1", "[", 
+   RowBox[{"x_", ",", "a_"}], "]"}], ":=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {
+         RowBox[{"{", "0", "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "0"}]},
+        {
+         RowBox[{"{", "a", "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "1"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t1", "[", "x_", "]"}], ":=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {
+         RowBox[{"Delete", "[", 
+          RowBox[{
+           RowBox[{"Flatten", "[", 
+            RowBox[{"Append", "[", 
+             RowBox[{"x", ",", 
+              RowBox[{"tt1", "[", 
+               RowBox[{"x", ",", "A"}], "]"}]}], "]"}], "]"}], ",", "1"}], 
+          "]"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[NotEqual]", "0"}]},
+        {
+         RowBox[{"{", "0", "}"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "0"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}]}], "Input",
+ CellChangeTimes->{{3.5687368813568*^9, 3.568736961801159*^9}, {
+  3.568737003063252*^9, 3.5687370915109873`*^9}, {3.568737139370721*^9, 
+  3.568737158096429*^9}, {3.5687372951696587`*^9, 3.568737304526021*^9}, {
+  3.568737349729636*^9, 3.56873737505713*^9}, {3.568737411992612*^9, 
+  3.5687374412529*^9}, {3.568737519376033*^9, 3.56873758197722*^9}, {
+  3.568737676883379*^9, 3.568737686914991*^9}, {3.5687377269040422`*^9, 
+  3.568737733885865*^9}, {3.568737776010456*^9, 3.568737852815692*^9}, {
+  3.568737970870673*^9, 3.568737994886142*^9}, {3.568738028779942*^9, 
+  3.568738029873328*^9}, {3.568738064566966*^9, 3.568738065342638*^9}, {
+  3.568738245602055*^9, 3.568738253574182*^9}, {3.5687383586612883`*^9, 
+  3.568738439027451*^9}, {3.568738490598143*^9, 3.568738498497027*^9}, {
+  3.568738623059678*^9, 3.568738686483025*^9}, {3.568738898245935*^9, 
+  3.568738898727676*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"aa", "=", 
+   RowBox[{"aa", "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"IntegerDigits", "[", "aa", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Nest", "[", 
+       RowBox[{"t1", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"j", ",", "2"}], "]"}], ",", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "20"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.568738350835669*^9, 3.5687383513297997`*^9}, {
+  3.568738444447956*^9, 3.568738448239048*^9}, {3.568738700770514*^9, 
+  3.568738736516799*^9}, {3.5687387740246553`*^9, 3.568738830701811*^9}, {
+  3.568738948775735*^9, 3.5687389734232616`*^9}, {3.568739103392624*^9, 
+  3.5687391652155313`*^9}, {3.5687392018570232`*^9, 3.568739220927526*^9}, {
+  3.568739347203289*^9, 3.568739386804677*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    RasterBox[{{3}, {3}, {3}, {3}, {3}, {3}, {3}, {3}, {3}, {0}}, {{0, 0}, {1,
+      10}}, {0, 3}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/pH9ZOiDh18sAcAZrBSOQ==
+     "], {{0, 0}, {
+     2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/oHVj+6OeiAWvpxy4eCwVMMmlj9
+AD71UPg=
+     "], {{0, 0}, {2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPJNx/dHHTwwR4AHt92
+6w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPxmRMKBk8xaOzmoIMP
+9gBYO3zE
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T84WA+LkBYPhQMnmLQ5PkD
+03wAhuF4CA==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81n7bmk+oOdEAv8ym1n1LzccuH
+gsFTDJpe5lNqPwClbXfk
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPKY0LfLAHAGSC
+m50=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9qPmw4Fg6cYNHZ7
+0MEHewCd3qF2
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7Q8HgKQZNnjvR
+wQd7AFkNoXY=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7Q8HgKQZNrDwD
+XvDBHgCSaadP
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D1770c1BB4TlQ8Hg
+KQZNHXcRth8A1ZKd6Q==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D6T9oWDwFIPGbg46
+ICxPnPm0cx8A8Capmw==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP24waUy4eCwVMMmjh3
+0d5+WrsPALGTooE=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/2O2nFo0LDBb7ae0+Su2n1H20
+th+3fCgYPMWgB4v9tHYfpfZT6j4AsU6iSw==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UdbGhf4
+YA8AN6jATw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UcuHQoG
+TzFo7O5ABx/sAXEExig=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLDgWD
+pxg0ef5EBx/sASwzxig=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLDgWD
+pxg0sfIMeMEHewBlj8wB
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtGrvtCweAp
+Bk2Zv3C5Ax18sAcA51PGKA==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.5687389591824293`*^9, 3.568738962934972*^9}, {
+   3.568739109734981*^9, 3.568739165788044*^9}, 3.568739196710162*^9, {
+   3.56873936877009*^9, 3.568739390001502*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"aa", "=", 
+   RowBox[{"aa", "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"IntegerDigits", "[", "aa", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Nest", "[", 
+       RowBox[{"t1", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"j", ",", "2"}], "]"}], ",", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "20"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{
+  3.568739196954249*^9, {3.568739392247477*^9, 3.5687393935939627`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    RasterBox[{{4}, {4}, {4}, {4}, {4}, {4}, {4}, {4}, {4}, {0}}, {{0, 0}, {1,
+      10}}, {0, 4}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/pH9ZOiDh18sAcAZrBSOQ==
+     "], {{0, 0}, {
+     2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/oHVj+6OeiAWvoJyb/AQRPWDwAA
+6UsH
+     "], {{0, 0}, {2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPJNx/dHHTwwR4AHt92
+6w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfMJm/MCB41uDjr4YA8A
+Gi920w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T84WA+LkCs/AscNKn+wDQf
+AIqmchc=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81n7bmk+oOdEAv8ym1n1LzCcm/
+wEHTy3zy7QcANG1mEQ==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPKY0LfLAHAGSC
+m50=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPiH6Bg0a3Bx18
+sAcAX9KbhQ==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9r/AgdNqjvRwQd7
+AFzSm4U=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9r/AgdNrDwu8MEe
+AFgim20=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D1770c1BB8TKv8BB
+U+ouwvYDABs3l/g=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D7z9L3DQ6OagA2Ll
+CZlPO/cBAALXl8g=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP24wbUkn+BgyY1HGhl
+P+3cBwBH5pCu
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/2O2nFo0LDBb7ae0+Su2n1H20
+tp+Q/Asc9GCxn9buo9R+8t0HAGjpfqU=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UdbGhf4
+YA8AN6jATw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UcZ/QIH
+je4OdPDBHgAy+MA3
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeffoGD
+JtWf6OCDPQAv+MA3
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeffoGD
+JlYeF/hgDwArSMAf
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtGuvte4KDJ
+9Rcud6CDD/YALPjANw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.568739394307377*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"aa", "=", 
+   RowBox[{"aa", "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"IntegerDigits", "[", "aa", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Nest", "[", 
+       RowBox[{"t1", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"j", ",", "2"}], "]"}], ",", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "20"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.5687393958970823`*^9, 3.568739396483677*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    RasterBox[{{5}, {5}, {5}, {5}, {5}, {5}, {5}, {5}, {5}, {0}}, {{0, 0}, {1,
+      10}}, {0, 5}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/pH9ZOiDh18sAcAZrBSOQ==
+     "], {{0, 0}, {
+     2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/oHVj+6OeiAWvpxy8+aCQIvMWhi
+9QMAQdBVzw==
+     "], {{0, 0}, {2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPJNx/dHHTwwR4AHt92
+6w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPxmTNrJgi8xKCxm4MO
+PtgDAFsWgZs=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T84WA+LkBYftZMEHiJQZPn
+D0zzASSrfN8=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81n7bmk+oOdEAv8ym1n1LzccvP
+mgkCLzFoeplPqf0AtIuGaQ==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPKY0LfLAHAGSC
+m50=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9qPm541EwReYtDY
+7UEHH+wBoLmmTQ==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7Z80EgZcYNHnu
+RAcf7AH2yKZN
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7Z80EgZcYNLHy
+DHjBB3sAMw6w/Q==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D1770c1BB4TlZ80E
+gZcYNHXcRdh+AA5LosA=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D6T9s2aCwEsMGrs5
+6ICwPHHm0859ADUiuCA=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP24waUy8+aCQIvMWji
+3EV7+2ntPgAsXrEG
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/2O2nFo0LDBb7ae0+Su2n1H20
+th+3/KyZIPASgx4s9tPafZTaT6n7AEhRv1U=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UdbGhf4
+YA8AN6jATw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UcuPWsm
+CLzEoLG7Ax18sAcAc9/K/w==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLnjUT
+BF5i0OT5Ex18sAcAye7K/w==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLnjUT
+BF5i0MTKM+AFH+wBBjTVrw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtGrvtmzQSB
+lxg0Zf7C5Q508MEeACAMyv8=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.568739397125555*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"aa", "=", 
+   RowBox[{"aa", "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"IntegerDigits", "[", "aa", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Nest", "[", 
+       RowBox[{"t1", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"j", ",", "2"}], "]"}], ",", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "20"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.568739398633219*^9, 3.568739399150395*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    RasterBox[{{6}, {6}, {6}, {6}, {6}, {6}, {6}, {6}, {6}, {0}}, {{0, 0}, {1,
+      10}}, {0, 6}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/pH9ZOiDh18sAcAZrBSOQ==
+     "], {{0, 0}, {
+     2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/oHVj+6OeiAWvpxy69eBQKvMGhi
+9QMAgllXBA==
+     "], {{0, 0}, {2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPJNx/dHHTwwR4AHt92
+6w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPxmbN6FQi8wqCxm4MO
+PtgDAJufgtA=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T84WA+LkBYfvUqEHiFQZPn
+D0zzAYvUfhQ=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81n7bmk+oOdEAv8ym1n1Lzccuv
+XgUCrzBoeplPqf0AN2SKCA==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPKY0LfLAHAGSC
+m50=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9qPm169CgReYdDY
+7UEHH+wB4UKngg==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7V68CgVcYNHnu
+RAcf7AFeAKeC
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7V68CgVcYNLHy
+DHjBB3sA2sCzZw==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D1770c1BB4TlV68C
+gVcYNHXcRdh+AJwUo/U=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D6T9q1eBwCsMGrs5
+6ICwPHHm0859AAU7u78=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP24waUy69eBQKvMGji
+3EV7+2ntPgBJt7Sl
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/2O2nFo0LDBb7ae0+Su2n1H20
+th+3/OpVIPAKgx4s9tPafZTaT6n7AGrSxpM=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UdbGhf4
+YA8AN6jATw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UcuvXoV
+CLzCoLG7Ax18sAcAtGjMNA==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLXr0K
+BF5h0OT5Ex18sAcAMSbMNA==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLXr0K
+BF5h0MTKM+AFH+wBrebYGQ==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtGrvtWrwKB
+Vxg0Zf7C5Q508MEeAK3VzDQ=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5687393999158173`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"aa", "=", 
+   RowBox[{"aa", "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"IntegerDigits", "[", "aa", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Nest", "[", 
+       RowBox[{"t1", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"j", ",", "2"}], "]"}], ",", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "20"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.568739400968506*^9, 3.568739401554339*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    RasterBox[{{7}, {7}, {7}, {7}, {7}, {7}, {7}, {7}, {7}, {0}}, {{0, 0}, {1,
+      10}}, {0, 7}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/pH9ZOiDh18sAcAZrBSOQ==
+     "], {{0, 0}, {
+     2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/oHVj+6OeiAWvpxy9/elgtErzFo
+YvUDAITbVwQ=
+     "], {{0, 0}, {2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPJNx/dHHTwwR4AHt92
+6w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPxmXN7Wy4QvcagsZuD
+Dj7YAwCeIYLQ
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T84WA+LkBY/va2XCB6jUGT
+5w9M8wGOVn4U
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81n7bmk+oOdEAv8ym1n1Lzccvf
+3pYLRK8xaHqZT6n9AD7qigg=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPKY0LfLAHAGSC
+m50=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9qPm769LReIXmPQ
+2O1BBx/sAePEp4I=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7b2/LBaLXGDR5
+7kQHH+wBYIKngg==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7b2/LBaLXGDSx
+8gx4wQd7AN/Es2c=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D1770c1BB4Tlb2/L
+BaLXGDR13EXYfgCelqP1
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D6T9t7flAtFrDBq7
+OeiAsDxx5tPOfQAMwbu/
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP24waUy9/elgtErzFo
+4txFe/tp7T4AUT20pQ==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/2O2nFo0LDBb7ae0+Su2n1H20
+th+3/O1tuUD0GoMeLPbT2n2U2k+p+wB53saT
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UdbGhf4
+YA8AN6jATw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UcufXtb
+LhC9xqCxuwMdfLAHALbqzDQ=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLvr0t
+F4heY9Dk+RMdfLAHADOozDQ=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLvr0t
+F4heY9DEyjPgBR/sAbLq2Bk=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtGrvtub8sF
+otcYNGX+wuUOdPDBHgCwV8w0
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5687394022508993`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"aa", "=", 
+   RowBox[{"aa", "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"IntegerDigits", "[", "aa", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Nest", "[", 
+       RowBox[{"t1", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"j", ",", "2"}], "]"}], ",", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "20"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.5687394033067617`*^9, 3.568739403974681*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    RasterBox[{{8}, {8}, {8}, {8}, {8}, {8}, {8}, {8}, {8}, {0}}, {{0, 0}, {1,
+      10}}, {0, 8}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/pH9ZOiDh18sAcAZrBSOQ==
+     "], {{0, 0}, {
+     2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/oHVj+6OeiAWvoJyb/BQRPWDwAD
+QUsT
+     "], {{0, 0}, {2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPJNx/dHHTwwR4AHt92
+6w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfMJm/MGB41uDjr4YA8A
+HId23w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T84WA+LkCs/BscNKn+wDQf
+AI5+ciM=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81n7bmk+oOdEAv8ym1n1LzCcm/
+wUHTy3zy7QcAQvVmNQ==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPKY0LfLAHAGSC
+m50=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPiH6Dg0a3Bx18
+sAcAYiqbkQ==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9r/BgdNqjvRwQd7
+AGCqm5E=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9r/BgdNrDwu8MEe
+AF5Sm4U=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D1770c1BB8TKv8FB
+U+ouwvYDACCPmAQ=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D7z9b3DQ6OagA2Ll
+CZlPO/cBABRfl+w=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP24wbUkn+DgyY1HGhl
+P+3cBwBcbpDS
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/2O2nFo0LDBb7ae0+Su2n1H20
+tp+Q/Bsc9GCxn9buo9R+8t0HAJr5fu0=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UdbGhf4
+YA8AN6jATw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UcZ/QYH
+je4OdPDBHgA1UMBD
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeffoOD
+JtWf6OCDPQAz0MBD
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeffoOD
+JlYeF/hgDwAxeMA3
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtGuvve4KDJ
+9Rcud6CDD/YAMlDAQw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5687394046351833`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"aa", "=", 
+   RowBox[{"aa", "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"IntegerDigits", "[", "aa", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Nest", "[", 
+       RowBox[{"t1", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"j", ",", "2"}], "]"}], ",", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "20"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.568739405693721*^9, 3.568739406309325*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    RasterBox[{{9}, {9}, {9}, {9}, {9}, {9}, {9}, {9}, {9}, {0}}, {{0, 0}, {1,
+      10}}, {0, 9}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/pH9ZOiDh18sAcAZrBSOQ==
+     "], {{0, 0}, {
+     2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmImIGZhgIEP9uTRo/oHVj+6OeiAWvpxy8scLwSiNxg0
+sfoBq6ZTCw==
+     "], {{0, 0}, {2, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPJNx/dHHTwwR4AHt92
+6w==
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T8UfPxmSNzvBCI3mDQ2M1B
+Bx/sAcTsftc=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81f9T84WA+LkBYXuZ4IRC9waDJ
+8wem+QA2AXob
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIQzcIAAx/syaMJ6R81n7bmk+oOdEAv8ym1n1LzccvL
+HC8EojcYNL3Mp9R+ADeNfh0=
+     "], {{0, 0}, {3, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9pPKY0LfLAHAGSC
+m50=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j9qPm5Y5XghEbzBo
+7Paggw/2AAqeo4k=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7ZY4XAtEbDJo8
+d6KDD/YACC2jiQ==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2j2T7ZY4XAtEbDJpY
+eQa84IM9AK46q3U=
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D1770c1BB4TlZY4X
+AtEbDJo67iJsPwDHEp/8
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP2D6T9MscLgegNBo3d
+HHRAWJ4482nnPgAHFa/U
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/av+o/aP24waUy8scLwSiNxg0
+ce6ivf20dh8ATUKoug==
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmIWKIaAD/bk0YT0Uyo/2O2nFo0LDBb7ae0+Su2n1H20
+th+3vMzxQiB6g0EPFvtp7T5K7afUfQB2+669
+     "], {{0, 0}, {4, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UdbGhf4
+YA8AN6jATw==
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3UcuLXO8
+EIjeYNDY3YEOPtgDAN21yDs=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLljle
+CERvMGjy/IkOPtgDANtEyDs=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3YeLljle
+CERvMGhi5Rnwgg/2AIFg0Cc=
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGDgAmJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtGrvtkjhcC
+0RsMmjJ/4XIHOvhgDwDY08g7
+     "], {{0, 0}, {5, 10}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5687394069078083`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"IntegerDigits", "[", 
+    RowBox[{"Prime", "[", "13", "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ArrayPlot", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Nest", "[", 
+       RowBox[{"t1", ",", 
+        RowBox[{"IntegerDigits", "[", 
+         RowBox[{"j", ",", "2"}], "]"}], ",", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "25"}], "}"}]}], "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "250"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.5687394482565413`*^9, 3.568739526919572*^9}, {
+  3.568739755683763*^9, 3.5687397733409224`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGIQzcIAAx/syaMJ6R81f9T8UfNHzR81f9T8UfNHrvm4
+AEz+BQ6aWHlK/Uep+3CbDwBS9icc
+     "], {{0, 0}, {3, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGIQzcIAAx/syaMJ6R81f9T8UfNHzR81f9T8UfNHzR+q
+5uMCMPkXOOgP9gC+dCh7
+     "], {{0, 0}, {3, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7cQOY/AscNKnhQK75A20/pfFPa/tpZT4M
+ENJPK/uplb8odR+l+il1/2B3H255AC5NK+k=
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGIWKIaAD/bk0YT0Uyo/av+o/aP2j9o/av+o/aP2j9o/
+av+o/aP2Dx770c1BBzD5FzjoD/YAlL6CcA==
+     "], {{0, 0}, {4, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGIWKIaAD/bk0YT0Uyo/av+o/aP2j9o/av+o/aP2j9o/
+av+o/aP209/+FzhodHPQAWH9AI0Oglg=
+     "], {{0, 0}, {4, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3TfqvlH3
+jbpv1H2j7ht136j7Rt03tNyHC8DkX+CgqaWfkDyt3Y/bXACPKdiQ
+     "], {{0, 0}, {5, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztlTEOgCAMRZvo4hEcPYl34Agmzl7b0SPIwkLCJ1hJEX8TwvBoCy9NWLbD
+7YOIzH5Nfo0S4lqf7bn83jn9YE4/mNMP5vSDOf1gTj+Y0w/m9IM5/WBOP5jT
+D+b0gzn9YE4/mNMP5vG5OAI/E3up51brW/e3rl/a9+3+X60fIpdfq38r81F7
+frT51vNhPT/afOv/VXt/6/zafv7+fq2f3t+f5jdSdS3I
+     "], {{0, 0}, {9, 25}}, {0, 
+     1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3TfqvlH3
+jbpv1H2j7ht136j7Rt036j56uI9Uf6ADmPwLHPQHewAPEtxl
+     "], {{0, 0}, {5, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3TfqvlH3
+jbpv1H2j7ht136j7Rt036j56uA9Gv8BBo9uDDgjrBwAHYtxN
+     "], {{0, 0}, {5, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3TfqvlH3
+jbpv1H2j7ht136j7Rt036j5quu8FDppUf6ADwuYDAARi3E0=
+     "], {{0, 0}, {5, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJWIGZhgIEP9uTRhPTTWn7UfaPuG3XfqPtG3TfqvlH3
+jbpv1H2j7ht136j7Rt036j5quu8FDppYeVyAsH4A/KPcNQ==
+     "], {{0, 0}, {5, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOWHu/vRzUEHMPkXOGhq6Sck
+P9D+w20uANWmM8M=
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOWHi/tf4KDRzUEH9NJPSH6g
+/Yc7/AGrRjOT
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+ZHiP1wAJv8CBz1Y
+9BOSH+z+J+Suwe5/8tMnACONiIQ=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztlDEKwzAQBA+c0h9I6ZfkD3lCwHW+nTJPsBs3gkTIazGyvAKhYrx3YnR4
+er2f8xAR93WP677Ftr6PfWcub65x+2e5/bPc/llu/yy3f5bbP8vtn+X2z3L7
+Z7n9s9z+WW7/LE+/S9fGPz/O0ne8an26f+/1S/se3d/1/9fN5Wv176W++v9X
+76fmaX+16qd1qPlX8/T7qH5bn3813/p8n33+1Tw9373Pv5qn/bfuR83TflX/
+9luXq/7tdy9fAIiGLLk=
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOVH3T+43U8tGheAyb/AQX+w
+BwAtYTZp
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOVH3T+43U8s/QIHje4OdEBY
+PwAlsTZR
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOVH3T+43Q+jX+CgSQ0HdEDY
+fAAisTZR
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOVH3T+43Q+jX+CgiZXHBQjr
+BwAbATY5
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOVH3T843P8CB02uv3G5Ax0Q
+th8AH7E2UQ==
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOVH3T843P8CB02sPwnpxwUI
+6wcAGAE2OQ==
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOVH3T843P8CB02sPLHhgA4I
+mw8AFQE2OQ==
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGI2IGZhgIEP9uTRhPQPtPyo+0fdP+r+weu+UfcPbvlR
+94+6f9T9g9d9o+4f3PKj7h91/6j7B6/7Rt0/uOVH3T843P8CB00teVyAsH4A
+DVE2IQ==
+     "], {{0, 0}, {6, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztz7EJgDAQQNEDBWewdBJ3cATB2rUtHcE0KY+ApMiHHziueFzgb+d9XFNE
+rGWWMnPU9+7/dut+dLeP7fax3T6228d2+9huH9vtY7t9bLeP7fax3T6299rZ
+q/4ku9d9y0fvz//9ADHcjuc=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW15YukXOGh0
+e9ABvfQTkh/s/scdfwAEfI63
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW15GP0CB01q
+OKADYs2nVD+l7h9o/+M2FwD+bY63
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDBWewdBJ3cATB2rUtHcE0KY+IheTDDxxXPK74ZNnP7Rgi
+Yi4zlRmjvnv9tlv3vbt9bLeP7fax3T6228d2+9huH9vtY7t9bLeP7faxve4r
+2W89e3/dt7z3/vz/HtENjoc=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkjEKgDAQBA+08AuWvsQ/+ATB2m9b+gTTpAwngYUNTCBcMQRmjmznfVxT
+RKzlLuXOUc+7983s/eicfm8/Naff20/N6ff2U3P6vf3UnH5vPzWn39tPzen3
+9lNz+r391Jx+bz81p9/bT83p/zdbp/KnMV3eZ3z0/WReo++n//9/tLvk1w==
+
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkrEJgDAUBT9o4QqWTuIOjiBYu7alIxgQm4AEAg/ehwuEXxyRu8RlP7dj
+iIi57KnsMb51r32zdT47p9/bT83p9/ZTc/q9/dScfm8/Naff20/N6ff2U3P6
+vf3UnH5vPzWn39tPzen39lNz+t95/cz6O/XKcr7Fs99P6/2z30////8AOqvk
+jw==
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1DEKgCAYQGGhlo7Q2Em6Q0cImrt2Y0eoxUXoCUkEP08Qh6eDH+i07svW
+pZTGew737FMe5/xurZ2P3vXhrg93fbjrw10f7vpw14e7Ptz14a4Pd32468Nd
+H+76cNeHuz7c9eGuD3d9uOvDvdxXjtyPhzXK+VqP7le7V3S/1vfV6vO333f/
+zwUFdThI
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkzEKw0AQAw+SPrXLvCR/yBMCrv3tlHmC3VyzEIwtL1rLOjiukKWFHev5
+md7jrbU2LPex3Hvr5/fa9675rdfWzVdbN19t3Xy1dfPV1s1XWzdfbd18tXXz
+1dbNV1uP38XT9e+fd+t/4vycfPZ852P5W+cePd/5nPx+1vxZ852PvXFOVn9R
+P3t/Z82POaz+on5VPkfxq95f1M/mk5Ufc1T7i/rZ/LP5qfcX9Z+9n1fvL+qv
+3k/3N9fP5uf+Yn42n2y+1feP+tn7r87X/Grr2XzNj6XPRL8ovA==
+     "], {{0, 0}, {15, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztz7EJgDAQQNEDBWewdJLs4AhCate2zAimSRkEC8nHf3Bc8bjib8e55yki
+1rpL3TnalPTuPv2P7vax3T6228d2+9huH9vtY7t9bLeP7fax3T6228f2v/d9
+dXvT/Orckm7vq5Be
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35ke4/atEv
+cNDo7kQHhPUDAOf7kEY=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35ke4/YukX
+OGhSwxEdEDYfAOT7kEY=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35ke4/YukX
+OGhi5XEBwvoB3UuQLg==
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35ke4/GP0C
+B02puejuRAeE7QcA4fuQRg==
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35ke4/GP0C
+B00t/bgAYf0A2kuQLg==
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35ke4/GP0C
+B02sPLHhiA4Imw8A10uQLg==
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35ke4/GP0C
+B00teVyAsH4Az5uQFg==
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35keK/Fzho
+csOF3HBEB4TdBwDe+5BG
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35keK/Fzho
+csOFVPNxAcL6AddLkC4=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35keK/Fzho
+YsOBUv24AGHzAdRLkC4=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDhcxg6STu4AgBa9e2dATTWIYTKz/+gyPF44qfue7rNkTE
+1La0HeOec3n3Zvdfd/vYbh/b7WO7fWy3j+32sd0+ttvHdvvYbh/b7WP7X/qO
+zvv0H7L7zHuT31/Mm5AW
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztz7EJgDAQQNEDBWewdBJ3yAgBa9e2dATTpAwRbfz4D44rHiH8Je9pGyJi
+LjuVHaPOuT67vfdfd/vYbh/b7WO7fWy3j+32sd0+ttvHdvvYbh/b7WP7X/qO
+xr3rb29r+v9f0UuQLg==
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35keK/Fzho
+YuUpNR8XIKwfAMmbkBY=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35keK/Fzho
+askTG47ogLD5AMabkBY=
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmVmYGCQBGJ2IGZhgIEP9uTRhPQPdvlR/w1t+VH/DW35Uf8NbflR
+/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35Uf8NbflR/w1t+VH/DW35keK/Fzho
+esnjAoT1AwC+64/+
+     "], {{0, 0}, {7, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWvsQ/5AmCtd+29AmmSRkC6uoKEziuGC7MTMuW1i4i
+xjxDnj7KO+Zru3X/d06/t5+a0+/tp+b0e/upOf3efmpOv7efmtPv7afm9Hv7
+qTn93n5qTr+3n5rT7+2n5vR7+6n5W7v2Ct8r+6n7Fv963+2r/3sCo63qCw==
+
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkbEJgDAUBT9o4QqWTuIOjiBYu7alI5gmTSAExCcvcIHPL47AXbLs53YM
+ETGnmdKMkc+9vtut+71z+r391Jx+bz81p9/bT83p9/ZTc/q9/dScfm8/Naff
+20/N6ff2U3P6vf3UnH5vPzWn39tPzb/aV2WXHuX5636L9/4+9f9/AHNN6ds=
+
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkLEJgDAUBT9o4QqWTuIOjiBYu7alI5gmjRCMhgcnvED4xZFw96d1X7Yu
+IsZ0h3T7yOecv82n93/n7mf7qbn72X5q7n62n5q7n+2n5u5n+6m5+9l+au5+
+tp+au5/tp+buZ/upufvZfmrufrafmtfOozDf7vF+av9vfd/qT99P+d8LbU3p
+2w==
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkTEKgDAQBA+08AuWvsQ/+ATB2m9b+gTTWB4JwsoGJnBcMQRmkmU/t2OI
+iLnMVGaM99zrt1273zun39tPzen39lNz+r391Jx+bz81p9/bT83p9/ZTc/q9
+/dScfm8/Naff20/N6ff2U3P6vf3UvHVfyW7l2fnrfo33/j75/z887emr
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkLEJgDAUBT9o4QqWTuIOjiBYu7alI5gmTSAoCQ9OeIHwiyPJXZb93I4h
+Iua0p7THyOte2+bb+b9z97P91Nz9bD81dz/bT83dz/ZTc/ez/dTc/Ww/NXc/
+20/N3c/2U3P3s/3U3P1sPzV3P9tPzfO8KrP132oe5fr6fu/53j76/9TvfQBn
+Tenb
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkTEKgDAQBA+08AuWvsQ/+ATB2m9b+gTTpDwiwugKGwhXDAczybTuy9ZF
+xFjuUG4f9Zzzs9na/zt3v7Yfzd2v7Udz92v70dz92n40d7+2H83dr+1Hc/dr
++9Hc/dp+NHe/th/N3a/tR3P3a/vRvM4jmXffqbWfnbf26b6v3yf//ws27emr
+
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkLEJgDAUBT9o4QqWTuIOjiBYu7alI5gmTSAYDA9OeIHwiyPh7i/7uR1D
+RMzpTumOkc+9fptv7//O3c/2U3P3s/3U3P1sPzV3P9tPzd3P9lNz97P91Nz9
+bD81dz/bT83dz/ZTc/ez/dTc/Ww/Nc/zqsxW3rrH8rT+3/u+15++n/q/DzDt
+6as=
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkTEKgDAQBA+08AuWvsQ/+ATB2m9b+gTTpDwC4soGJnBcMQRmkmU/t2OI
+iLnMVGaMeu713W7d753T7+2n5vR7+6k5/d5+ak6/t5+a0+/tp+b0e/upOf3e
+fmpOv7efmtPv7afm9Hv7qTn93n5qXveV7K94dv663+K9v0/+/w8Ajel7
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAQQNEDbRzB0kncISMI1q5t6QimSZkfCBYSfuC44hEIH7IdVzqn
+iFjzLHnmKOfZ+3br/uhuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZh
+tw+7fdjtw24fdvuw24fdPuz2Yf9q107xu7L/cr/lo/drvWv0fv3/6wUZEUE5
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAUANEP2jiCpZO4gyMI1q5t6QimSRPwIukMFwi/OELgkSz7uR1D
+RMxpT2mPkde9ts3a+d67Ptz14a4Pd32468NdH+76cNeHuz7c9eGuD3d9uOvD
+XR/u+nDXh7s+3PXhrg93fbjrw/3rvF5meU+5/nK+1nv3q72f3v3a/9cDlfJA
+8Q==
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAUANGANo5g6STu4AiCtWtbOoJp0gheNBZiuED4xZEQHzjM67Q0
+IYQ+7i7uNqS1j2Uzd772rg93fbjrw10f7vpw14e7Ptz14a4Pd32468NdH+76
+cNeHuz7c9eGuD3d9uOvDXR/u+nBPc7uYTx3P6+79X59/+/1/98u9q3a/8v/r
+AIzyQPE=
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAQQNEDbRzB0kncISMI1q5t6QimSZkfSWf4geOKR5pPsh1XOqeI
+WPMseeYo59n7duv+6G4fdvuw24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7s9mG3
+D7t92O3Dbh92+7Dbh90+7PZhL/uu7K9eO3+53/LR+7Xez+j9+v/XCwniQKk=
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANEPWrmBpZO4gyMI1q5t6QimSSNI0EMQc4FPiiNFHiTDvE5L
+ExF9mi5NG3nt47O9dL72rh/r+rGuH+v6sa4f6/qxrh/r+rGuH+v6sa4f6/qx
+rh/r+rGuH+v6sa4f6/qxrh/r+rF+1/G8ct8u9r+cL/XafUv3qt2Xvl/q93Xf
+9/6/A3BBlco=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAQQNEDrdzA0kncwREEa9e2dARt0gQk4EcQ7gfCFZ+keGimdV+2
+LiLGew/37qOsc343W+ezd/1Y1491/VjXj3X9WNePdf1Y1491/VjXj3X9WNeP
+df1Y1491/VjXj3X9WNePdf1Y14/1Mo+HWd9TryznWz27b+v7y+5L/1/q93ff
+796/C2dylWo=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1TEKgCAYQGGhtk7Q2Em6Q0cImrt2Y0eoxUVII3lI8ARxeP7LN+i07svW
+hRDGew/37kNc5/ztLM3b811ftuvLdn3Zri/b9WW7vmzXl+36sl1ftuvLdn3Z
+ri/b9WW7vmzXl+36sl1ftuvLdn3Znt5LV+zHw+n8u65/fr7kon9+vvZ9qPX9
+uz/9/tK+rf3b/W8XR6fnzQ==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztlDEOwjAUQyPBCdgYOQl36BGQmLk2I0egS5ZIEBUT/PN5kaoOr3ak2vLp
+cluuu1LKcX0O67Mv9TzOn717evh/c/oDVzj9gSuc/sAVTn/gCqc/cIXTH7jC
+2+/aU/n9xXtrD/Gf0999P/6x/bfe++378c/pX09PP+p+/GP49+4dvT+q3v3/
+8H/v694fVZ81n1n2Jfr+qHp3PrP6tz5Z90fVZ83/V/3Ivj+q3p3/KP/Wh/3x
+6N39cveD/Rmrz74v7I9XP/u+sD+x9e782Z/Yene+7v5Ez8etd+fn5mp/ouer
+6t35ROej+0M/cnN3f+jHrPwJpmgh0Q==
+     "], {{0, 0}, {18, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj7EJwDAMBAVJkRVSZhLv4BECqbN2So8QNy6NwfDwhhMIFYfg7rrf/GwR
+cdY96u7RpqS5O/pfndPv7afm9Hv7qTn93n5qTr+3n5rT7+2n5vR7+6k5/d5+
+ak6/t5+a0+/tp+b0e/upOf3efmpO/xq3N41/nVvSD1YO6lM=
+     "], {{0, 0}, {8, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj7EJgFAQxT5o4QqWTuIOjiBYu7alI2hj80E+CA8i5OC4Ihwk07ovW1dK
+Ge8d7u3LM+f87bb+/87tZ/uluf1svzS3n+2X5vaz/dLcfrZfmtvP9ktz+9l+
+aW4/2y/N7Wf7pbn9bL80t5/tl+b2M+7xcuuOetr/F05e6js=
+     "], {{0, 0}, {8, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkbEJgDAUBT/EwhVSOok7OIJg7dopHcE0NoIEhReecIHPL46EOzKt+7Kl
+iMh1xjpDXOeYv+3W/b9z+r391Jx+bz81p9/bT83p9/ZTc/q9/dScfm8/Naff
+20/N6ff2U3P6vf3UnH5vPzWn39tPzenvs8vDfvsP99N+/wRLXuo7
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWvsQ/+ATB2m+n9AlJYxkiwoYNzMFxxXAws533cU0R
+sZZdys7xzrP/u63/0Tn93n5qTr+3n5rT7+2n5vR7+6k5/d5+ak6/t5+a0+/t
+p+b0e/upOf3efmpOv7efmtPv7afm9Pe5qXK/8tq0/zNDruoj
+     "], {{0, 0}, {8, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj7EJwCAUBT8kRVZI6STZwRECqbN2SkeIjaUIwQcvcMLnF4d6l847X0tE
+7HW2Omu0U45ve3T/75x+bz81p9/bT83p9/ZTc/q9/dScfm8/Naff20/N6ff2
+U3P6vf3UnH5vPzWn39tPzen39lNz+ufsp7Nnvd874/9fSF7qOw==
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWeYl/yBMEa79tmSeYJmUISBZWmIPjiuFgJp13vpaI
+2OtudddoU45vd/T/d06/t5+a0+/tp+b0e/upOf3efmpOv7efmtPv7afm9Hv7
+qTn93n5qTr+3n5rT7+2n5vR7+6k5/XPu07mz/nsz/n8BQK7qIw==
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkbEJgDAUBT9o4QqWTuIOjhCwdm1LRzBNGiEkiA+ecIHPL46EO7KkY9uH
+iJjzTHnGKOda3+3W/b9z+r391Jx+bz81p9/bT83p9/ZTc/q9/dScfm8/Naff
+20/N6ff2U3P6vf3UnH5vPzWn39tPzen/Zp+V3ct7/+F52u/fPa7qIw==
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWeYl/yBMEa79tmSeYJmUISBZWmIPjiuFgJp13vpaI
+2OtudddoU45vd/T/d06/t5+a0+/tp+b0e/upOf3efmpOv7efmtPv7afm9Hv7
+qTn93n5qTr+3n5rT7+2n5vR7+6k5/XPu07mzeG/G/y81/uoL
+     "], {{0, 0}, {8, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkTsKgDAQBRe08AqWnsQ7eISAtde29AimSSOE+OHBEyawbDEkzJApbcva
+RcSYZ8jTRznH/G637v+d0+/tp+b0e/upOf3efmpOv7efmtPv7afm9Hv7qTn9
+3n5qTr+3n5rT7+2n5vR7+6k5/d5+ak7/vb1X9td3n/7D9bT9TkVe6js=
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWvsQ/+AQhtd+29AmmSRkSDAsrzEG4Ysgxs53XkaaI
+WPNb8pujzLN/263/f+f0e/upOf3efmpOv7efmtPv7afm9Hv7qTn93n5qTr+3
+n5rT7+2n5vR7+6k5/d5+ak6/t5+a09+378oevdt7vzbt/y89ruoj
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWvsQ/+ATB2m+n9AlJYxkiwoYNTOC4Yrgws533cU0R
+sZZZyszxvmf/t1v3o3P6vf3UnH5vPzWn39tPzen39lNz+r391Jx+bz81p9/b
+T83p9/ZTc/q9/dScfm8/Naff20/N6f+2U2X3uq+99v8ZOq7qIw==
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgEAMBANa+AVLX+IffMKBtd+29AleY3nkEBdWmEBIMQRmlnJs+xAR
+c92p7hjPXOu7m/3/ndPv7afm9Hv7qTn93n5qTr+3n5rT7+2n5vR7+6k5/d5+
+ak6/t5+a0+/tp+b0e/upOf3efmpOf989G/er/4y3Jv+/ATL+6gs=
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWvsQ/+AQhtd+29AmmSRkSDAsrzMFxxRAys53XkaaI
+WPMueeco8+zfbuv93zn93n5qTr+3n5rT7+2n5vR7+6k5/d5+ak6/t5+a0+/t
+p+b0e/upOf3efmpOv7efmtPv7afm9Pfdu3J7+eitTfv/Fzeu6iM=
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWvsQ/+AQhtd+29AmmSRkSDAsrTOC4Yrgws53XkaaI
+WPMseeYo79m/7db93zn93n5qTr+3n5rT7+2n5vR7+6k5/d5+ak6/t5+a0+/t
+p+b0e/upOf3efmpOv7efmtPv7afm9Pftu7J7+ej/tde+fwEv/uoL
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkbEJgDAUBT9o4QqWTuIOjhCwdm1LRzBNGiEkiA+ecIHPL46EO7KkY9uH
+iJjzTHnGKOda3+3W/b9z+r391Jx+bz81p9/bT83p9/ZTc/q9/dScfm8/Naff
+20/N6ff2U3P6vf3UnH5vPzWn39tPzenv22dlf8V7/+F52u/fLP7qCw==
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztjzEKgDAQBA+08AuWvsQ/+ATB2m+n9AlJYxkiwoYNzMFxxXAws533cU0R
+sZZdys7xzrP/u63/0Tn93n5qTr+3n5rT7+2n5vR7+6k5/d5+ak6/t5+a0+/t
+p+b0e/upOf3efmpOv7efmtPv7afm9H+7qXJ78dq0/zMlTunz
+     "], {{0, 0}, {8, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkMEJgDAQBA/0kRZ8Wok9WELAt237tAQDwWcIBBdWmIPjHkNgJms+92OK
+iKVsKjvHO/c2dnvv/87p9/ZTc/q9/dScfm8/Naff20/N6ff2U3P6vf3UnH5v
+PzWn39tPzen39lNz+r391Jx+bz81p7/eq3FH/+3r25q+/wNCXuo7
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkMEJgDAQBA/0YQs+rcQeLEHwbds+LcFA8BkOAwsrTOC4xxAyk2U/t2OI
+iLnMVGaM99xr387u/53T7+2n5vR7+6k5/d5+ak6/t5+a0+/tp+b0e/upOf3e
+fmpOv7efmtPv7afm9Hv7qTn93n5qTn/dV2P3/tvXnb3fOvn9Bzqu6iM=
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkLEJgDAUBT9okRUsncQdHCFg7dqWjmAgWIZA8MET7kP4xZFwlzWf+zFF
+xFJOKmeOd+5tbPfu/53T7+2n5vR7+6k5/d5+ak6/t5+a0+/tp+b0e/upOf3e
+fmpOv7efmtPv7afm9Hv7qTn93n5qTn/dV2OP/tvX77em//4DN67qIw==
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkMEJgDAQBA/0YQs+rcQeLEHwbds+LcFA8BkOAwsrTOC4x5Awk2U/t2OI
+iLnMVGaM99xr387u/53T7+2n5vR7+6k5/d5+ak6/t5+a0+/tp+b0e/upOf3e
+fmpOv7efmtPv7afm9Hv7qTn93n5qTn/dV2P3/tvX9zPeOvn9By/+6gs=
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkbEJgDAUBT9o4QqWTuIOjiBYu7alIxgQG0ESEh484QLhF0fIXTKt+7J1
+ETGmPaTdx7POuW7mzv+d0+/tp+b0e/upOf3efmpOv7efmtPv7afm9Hv7qTn9
+3n5qTr+3n5rT7+2n5vR7+6k5/d5+ak7/PY+PWfpOredL/+G98vdfNK7qIw==
+
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkMEJgDAQBA/iwxZ8Wok9WILg27bztIQExGeICAsbmMBxj+FgJutx7WeK
+iKXOXGeK993bv927H53T7+2n5vR7+6k5/d5+ak6/t5+a0+/tp+b0e/upOf3e
+fmpOv7efmtPv7afm9Hv7qTn93n5qTv+zc2N//Sf1fev17wss/uoL
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkMEJgDAQBA/0YQs+rcQeLEHwbds+LcFA8BlOlIUVJnDcY0iYybTuy9ZF
+xFhmKNPHfc753c7u/53T7+2n5vR7+6k5/d5+ak6/t5+a0+/tp+b0e/upOf3e
+fmpOv7efmtPv7afm9Hv7qTn93n5qTn/dR2M//afs/tf3Wyd//wIp/uoL
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkLEJgEAQBA80sAVDK7EHSxCMbdvQEnx4DJ8TZWGFeTguGA5mflr3Zesi
+YiwzlOnjfuf8bmf3f+f0e/upOf3efmpOv7efmtPv7afm9Hv7qTn93n5qTr+3
+n5rT7+2n5vR7+6k5/d5+ak6/t5+a01/30dhP/ym7/8pbL7+/ACJO6fM=
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj7EJgDAUBT/EwhUsncQdHEGwdu2UjpCAWIaI8OAFLvB5xRG4W49rP1NE
+LPXmelO8797+be//6Jx+bz81p9/bT83p9/ZTc/q9/dScfm8/Naff20/N6ff2
+U3P6vf3UnH5vPzWn39tPzen39lNz+p/Njf3K1dt6fb8CMa7qIw==
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj7EJgEAQBA80sAVDK7EHSxCMbdvQEnx4DJ8TZWGFeTguGO6ZmdZ92bqI
+GMsMZfq43zm/29n93zn93n5qTr+3n5rT7+2n5vR7+6k5/d5+ak6/t5+a0+/t
+p+b0e/upOf3efmpOv7efmtPv7afm9Nd9NPZT/nVn/7defn8BKf7qCw==
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkbEJgDAUBT9o4QqWTuIOjiBYu7alIxgQG0ESEh484T6EXxwJd2Ra92Xr
+ImJMZ0inj2fOuW7n7v+d0+/tp+b0e/upOf3efmpOv7efmtPv7afm9Hv7qTn9
+3n5qTr+3n5rT7+2n5vR7+6k5/d5+ak7/vY+PXcpb3y/9h/fk378AJv7qCw==
+
+     "], {{0, 0}, {8, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj8EJgDAQBA/iwxZ8Wok9WILg27bztIQExGeICAsbmMBxj+HCzHpc+5ki
+Yqkz15nifff2b/fuR+f0e/upOf3efmpOv7efmtPv7afm9Hv7qTn93n5qTr+3
+n5rT7+2n5vR7+6k5/d5+ak6/t5+a0//s3Nhfufr/1uvfFx9O6fM=
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj8EJgDAQBA/0kRZ8Wok9WELAt237tAQDwWcIqAsrzMFxjyFkZs77ug0R
+MZVNZce451ye3d77v3P6vf3UnH5vPzWn39tPzen39lNz+r391Jx+bz81p9/b
+T83p9/ZTc/q9/dScfm8/Naff20/N6a/3aNyv+Nvbmv7/FyP+6gs=
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj8EJgDAQBA/0kRZ8Wok9WELAt237tAQDwWcIqAsrTOC4x3BkZs77ug0R
+MZVJZca437k82737v3P6vf3UnH5vPzWn39tPzen39lNz+r391Jx+bz81p9/b
+T83p9/ZTc/q9/dScfm8/Naff20/N6a/7aOyv+Nv/W69/fwEcTunz
+     "], {{0, 0}, {8, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztkbEJgDAUBT9o4QqWTuIOjiBYu7alIxgINoEQEZ484QKfXxwJd2Ra92Xr
+ImJMM6Tp4z7n/G637v+d0+/tp+b0e/upOf3efmpOv7efmtPv7afm9Hv7qTn9
+3n5qTr+3n5rT7+2n5vR7+6k5/d5+ak5/3kdlf8Wf/kN52u9fGU7p8w==
+     "], {{0, 0}, {8,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztj7EJgFAQxT5o4QqWTuIOjiBYu7alIyiI5eeD8CBCDo4rwkEyrfuydaWU
+8d7h3r68c87fbuv/79x+tl+a28/2S3P72X5pbj/bL83tZ/uluf1svzS3n+2X
+5vaz/dLcfrZfmtvP9ktz+9l+aW7/c4/KpfDatP8vEZ7p2w==
+     "], {{0, 0}, {8, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncISMI1q5t6QimSZkfUIsg/yBc8bgif9mOtA8R
+Mec35TdGmWt9tlv3f3f7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZhtw+7
+fdjtw24fdvuw24fdPuz2YbcPu33Ye9m1KX5W9lf3Le991+bt/yJuKzdFPg==
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAUANEP2jiCpZO4gyMI1q5t6QimsQnkAoIR5ALhF49AcmRa92Xr
+ImJMe0i7j3ud87NZO/93tw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh73VPAozv2e+Wp2v+dfz7feX/88F98hF
+Dg==
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0b0JgDAUAOEH2jiCpZO4gyMI1q5t6QimsRFy/sRGuUB4xUdCuHTjPExV
+RLRpN2nXsa+1fzbPzv/d7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+
+7PZhtw+7fdjtw24fdvuw24fdPuz2YX9rLpl59x+O6+r9pedL3//1fvl7N/HI
+RQ4=
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgEAMQNGANo5g6STu4AiCtWtbOoLXWOafiFgc/yCkeKT53LTuy9ZF
+xFhmKNPH/c753a7dt+72YbcPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92
++7Dbh90+7PZhtw+7fdjtw24fdvuwf7WPZD/17P11X/PW++X/5wK+aETe
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAUANEP2jiCpZO4gyMI1q5t6Qja2ARyBoMgcoHwiyMxvmFep6WJ
+iP7c3bnbuNY+Ppt35//e9eGuD3d9uOvDXR/u+nDXh7s+3PXhrg93fbjrw10f
+7vpw14e7Ptz14a4Pd32468NdH+76cC+dW2bW3pu+M12l3689//b/fd0vf+8B
+68hFDg==
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDbRzB0kncwREEa9e2dATTWN5XVATlB8IVjyvySTfOw1RF
+RFtuU24d+1n7a/No/+9uH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZh
+tw+7fdjtw24fdvuw24fdPuz2YbcP+9m5JPOp/ey8tX/3fV/vl/+fDbhoRN4=
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbRzB0kncwREEa9e2dATT2Aj5HlopPxCueCSEn2Fep6WJ
+iL7sruw2zrWPz+bd+b+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7sNuH
+3T7s9mG3D7t92O3Dbh92+7Dbh90+7Nm5VWbWs/9wXdn7355/+/6v96vfewCy
+aETe
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgEAMQNGANo5g6STu4AiCtWtbOoLXWOafiFgc/yCkeKT53LTuy9ZF
+xFhmKNPH/c753a7dt+72YbcPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92
++7Dbh90+7PZhtw+7fdjtw24fdvuwP91Hsr/y7P11X/PW++X/5wJ/CESu
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAUANEP2jiCpZO4gyMI1q5t6QimSSPklKRSLhB+cSTE57Tuy9ZF
+xJj2kHYfeZ1z3Xw6//euD3d9uOvDXR/u+nDXh7s+3PXhrg93fbjrw10f7vpw
+14e7Ptz14a4Pd32468NdH+76cNeHe55HYda61v6H+3r7vtbzrd//db/yvRfl
+yEUO
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAUANEP2jiCpZO4Q0YQrF3b0hFMkzInRhCUC4RfHAnkkWnZ0tpF
+xJj3kHcfZR1z27w6//euD3d9uOvDXR/u+nDXh7s+3PXhrg93fbjrw10f7vpw
+14e7Ptz14a4Pd32468NdH+76cNeHe5l7Zba63r2/tt46//T9X/er/58TsmhE
+3g==
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwREEa9e2dATTpMw3mCIgPxCu+Fwgb9nP7Rgi
+Yk53SneMfO7123zb/3vXh7s+3PXhrg93fbjrw10f7vpw14e7Ptz14a4Pd324
+68NdH+76cNeHuz7c9eGuD3d9uOvDPc+rMGsdW/dLp/b91v3e/+/tV373Aaxo
+RN4=
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDbRzB0kncISMI1q5t6QimSZkfERSRHwhXPK7IJ9OypbWL
+iDHfId8+yjnme7O1/3e3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw
+24fdPuz2YbcPu33Y7cNuH3b7sNuHvcy9Mq92bO23vHbe2n/6/V/vV/8/J3kI
+RK4=
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LENgCAUANGfaOMIlk7iDoxgYu3alo4gDSUnkUpzJOQXL0C4ZTvSPkTE
+nPeU9xhlXeu7+XT+724fdvuw24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7s9mG3
+D7t92O3Dbh92+7Dbh90+7PZhtw97mWdltnrvrK3W93vP9/7v6/3q996maETe
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAUANEP2jiCpZO4Q0YQrF3b0hFMkzKnKIrIBcIvHgnkyDAtaW4i
+os+7y7uNsrbx2jw6/3e3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw
+24fdPuz2YbcPu33Y7cNuH3b7sNuHvcy1Ms/63ftr663zT7/v6/3q/2cHcwhE
+rg==
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAUANEP2jiCpZO4gyMI1q5t6QjapBFyBmOjXCD84pEQLsO8TksT
+Ef25u3O3kdY+Ppt35//u9mG3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24f
+dvuw24fdPuz2YbcPu33Y7cNuH3b7sKe5ZeZbXvoP11V6f+352vd/vV/+3gNt
+CESu
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDbRzB0kncwREEa9e2dATTpLwfsEgRfuC44nHNJ9t5H9cU
+EWuZpcwc9b37v926H93tw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7s
+9mG3D7t92O3Dbh92+7Dbh90+7PZhr/tJdi/PXq/7lo/eL/8/HzmoRH4=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAQQNEDrdzA0kncwREEa9e2dATTpAyBfFAhPxCueBzohyz7uR1D
+RMzpTumOkc+9ts3afu9uP+b2Y24/5vZjbj/m9mNuP+b2Y24/5vZjbj/m9mNu
+P+b2Y24/5vZjbj/m9mNuP+b2Y24/5m/N0sl+FeZf9mv+9aT/R/dr39V73/b3
++wBQcZ2M
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAUANEPWrmBpZO4gyMI1q5t6QimSROQQM5GcoHwiyMQHsmyn9sx
+RMSc9pT2GHnda9usne+968e6fqzrx7p+rOvHun6s68e6fqzrx7p+rOvHun6s
+68e6fqzrx7p+rOvHun6s68e6fqzrx/pX83qZ5T3K9Zfztd67b+399e7b/n8f
+xFKdRA==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAUANEPWrmBpZO4gyMI1q5t6Qja2AiSmCsEc4HwiyNinjjM67Q0
+EdGfuzt3G9fax7KZOl971491/VjXj3X9WNePdf1Y1491/VjXj3X9WNePdf1Y
+1491/VjXj3X9WNePdf1Y1491/VjXj/XcuT3Mt9/hvnKf//V5ev+/+6beq3bf
+8v/3ALtSnUQ=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAQQNEDrdzA0kncwREEa9e2dATTpAwJ+ZXkB44rHmk+yXbexzVF
+xJpmSTNHPu/et2v3R3f7Mbcfc/sxtx9z+zG3H3P7Mbcfc/sxtx9z+zG3H3P7
+Mbcfc/sxtx9z+zG3H3P7Mbcfc/sxb91PYbd66fzlfs1H71t7f6P37f+/Hy9C
+nPw=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAUANEPWrmBpZO4gyMI1q5t6QjapBFCJFcI5gLhF0dIeJBp3Zet
+i4jx3sO9+0jrnOtm6XzrXT/W9WNdP9b1Y10/1vVjXT/W9WNdP9b1Y10/1vVj
+XT/W9WNdP9b1Y10/1vVjXT/W9WNdP9bTPDKz1j33jud6e//X56nP331L72rd
+t/7/XrJSnUQ=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAQQNEDrdzA0kncwREEa9e2dATTpAyRfCwkPxCu+FzzSJb93I4h
+IuZ0p3THyOde22Ztv/euH+v6sa4f6/qxrh/r+rGuH+v6sa4f6/qxrh/r+rGu
+H+v6sa4f6/qxrh/r+rGuH+v6sa4f63lehfnWubZfOn/Z/9rn776199e7b/v/
+fQAmQpz8
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAUANEPWrmBpZO4gyMI1q5t6QjapBEkIVcI5gLhF0fEPHFa92Xr
+ImK893DvPtI657qZO9961491/VjXj3X9WNePdf1Y1491/VjXj3X9WNePdf1Y
+1491/VjXj3X9WNePdf1Y1491/VjXj/U0j5dZ2ku/w3OVPv/r8/T+f/fNvVfr
+vvX/7wUdQpz8
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt07EJgDAQQNEDrdzA0kncISMI1q5t6QimSRkC+TaSHziueKT5JNtxpXOK
+iDXPkmeOcp69b7fuj+72Y24/5vZjbj/m9mNuP+b2Y24/5vZjbj/m9mNuP+b2
+Y24/5vZjbj/m9mNuP+b2Y24/5vZjXvZd2V957fzlfstH79t6f6P37f+/L5Ej
+nLQ=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAQQNED7ZzA0kncwREEa9e2dARtUiYB4y+UHwhXfK7IKzKt+7J1
+ETHed7hvH+mc87NZ27eXu75s15ft+rJdX7bry3Z92a4v2/Vlu75s15ft+rJd
+X7bry3Z92a4v2/Vlu75s15ft+rJdX7a/NXMn9SMz/7Jf6/qX92vv0r+83/o/
+tPp+3Z/7fy+3VfNM
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAQQNED7ZzA0kncwREEa9e2dARtbAImYviF+APhis8hPCTDvE5L
+ExH9ebvztnGdfXw3S/v2fNeX7fqyXV+268t2fdmuL9v1Zbu+bNeX7fqyXV+2
+68t2fdmuL9v1Zbu+bNeX7fqyXV+268v2p3O7mel30vOX/VLXP79f+n/1z+/X
+vg+1vl/3597fA5yG8uw=
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAdk5g6STu4AiCtWtbOoI2aQIajVwRvED4xZGgT3CY12lp
+Qgj9ubtztyGufSybufP2+64v2/Vlu75s15ft+rJdX7bry3Z92a4v2/Vlu75s
+15ft+rJdX7bry3Z92a4v2/Vlu75s15ftcW4X8+13SNfT+2s//9Xv7/6599K/
+7PnSeyjf2v25/+8BkIby7A==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAQQNED7ZzA0kncwREEa9e2dARtUiYRwy/EHwhXPK7wI5nWfdm6
+iBjvO9y3j3TO+d2s7etlty/r9mXdvqzbl3X7sm5f1u3Lun1Zty/r9mXdvqzb
+l3X7sm5f1u3Lun1Zty/r9mXdvqzbl/U0j8x86rnzl/2a27+8X/t/7V/eb30f
+Wr//6/259/cCdbfyjA==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1b0JgDAQQOGAli5g6STu4AiCtWtbOoJpbATx5whP5AWCxcc17yB24zxM
+VUqpzbfJt077Wft336t5Peb2Z93+rNufdfuzbn/W7c+6/Vm3P+v2Z93+rNuf
+dfuzbn/W7c+6/Vm3P+v2Z93+rNuf9ad7OJ7dl5Ov8/fc/cTmr7q4n9h89P2J
+9v/7fkq//6X7f30/3P93A89eRo0=
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1bEJgDAUANGAli5g6STu4AiCtWtbOoJpbASJ+AknckJI8fgWF4nDvE5L
+k1Lq8+ryatP57OO7vTSvx9z+rNufdfuzbn/W7c+6/Vm3P+v2Z93+rNufdfuz
+bn/W7c+6/Vm3P+v2Z93+rNufdfuzfu7bzX59z/Vx/tl8yT2f2Hzp+/d8YvPR
++yfa/+/nU/v+r93/6+fD/X8P5tBGFQ==
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1rEJgDAUANGAtg5g6STu4AiCtWtbOoI2NoIE1E9OvEBIcf4mD9RunIep
+Sim1+272Xadjrf29Mzdvj+36sLs+7K4Pu+vD7vqwuz7srg+768Pu+rC7Puyu
+D7vrw+76sLs+7K4Pu+vD7vqwuz7sfn7uvI6+XJzOvzOf6/rFzufuVb/Y+afv
+t6c+f/eL/v5E+3zdr/T/QWmf0n6l7/+6b4XalzE=
+     "], {{0, 0}, {13, 25}}, {0, 1}],
+    
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJztlDEOwjAQBC3BFygoeQl/yBOQqPk2JU8gTRqLxEqO057PY8lKsdk5ybfa
+2+M1PU+llOt8L/M9l+V87se+LT86uqdOPtEj6+QTPbJOPtEj6/V/9Vn098p3
+b87hw//FV8+HPzZ/79x/z4cP/wh/OS2/13z4Y/Bbc7370+pXvx98Db/mqPrT
+6s+6nyx8a/6i96fVr94P/G1u9v60+rPuP0s/Zu9Pq1+9/175NYf+1Piz5itK
+/uhPX786X178mkN/5vSr86vOF/3Zt3/0fqQ/+/Zn70f6M7dfnR/6c2y/Oh9q
+vfU+0ffXu1+9/+i6NZ/R96/2q/fbu+6dz+j5sfrV+8uuq/NJ/tC3dHX+1PlV
+vz/6mv4FeA4X+A==
+     "], {{0, 0}, {21, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZNkh4wQsHZty4xgmpT5gmX4B8cVj2v+We9ybRFx
+9E199xjT8r/79b+624fdPuz2YbcPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3D
+bh92+7Dbh90+7PZhtw+7fdjtw24f9lXubIY/k9vyC2BsRFc=
+     "], {{0, 0}, {9, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2GQESydxB0cQUrt2SkcwjU3AH7BTfuC44nFF/rIfW0kR
+MbfJbaa437m+26P7v7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fd
+Puz2YbcPu33Y7cNuH3b7sNuH3T7s9mH/yq4Pu/9n/8b3F1i8RD8=
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNGD2DhCSidxh4wgWLu2pSOYxkbID1qJ/MBxxSMpfqZlK2uK
+iFxnrDPEdY753e7d/7vbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y
+7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh/2r+y9sZ/+4/303z8BVbxEPw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/wUrkHxxXPK7525mPNEXE
+WnepO8cz1/7u9v7/7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh/0rtzTuqLem/38DTgxEJw==
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/EMRCfuC44pEE/nbmI00R
+sdZZ6szxnGsf2737f3f7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZhtw+7
+fdjtw24fdvuw24fdPuz2YbcPu33Y7cP+1S6N/db7rdP//wZSvEQ/
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/EMRC/sFxxeOav535SFNE
+rHWXunM8c+1jt/f/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuxf3dK4b/23pv9/A0sMRCc=
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbRzB0kncwREC1q5t6QimSSPkJ1hYyA8cVzyS4mdJx7YP
+ETHnmfKMUc61vtut+393+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2YbcP
+u33Y7cNuH3b7sNuH3T7s9mG3D7t92O3D/tU+K7vXe//xedrv30gMRCc=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/EMRC/sFxxeOav535SFNE
+rHWXunM8c+1jt/f/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuxf3dK4b3lr+v83QFxEDw==
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAUANEP2mQESydxB0cIWLu2pSOYJk3AC4g2coHwi0dIcnPe122I
+iKnsVPYYdZ3Ls9k7/3e3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw
+24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7sb83jZn59b/vPdvXfdwFPvEQ/
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/EMRCfuC44nEp/nbmI00R
+sdZZ6szxvGsf2737v7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fd
+Puz2YbcPu33Y7cNuH3b7sNuH3T7s9mF/a5fG/ur/1uvf30gMRCc=
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/EMRCfuC44nEp/nbmI00R
+sdZZ6szxvGsf2737v7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fd
+Puz2YbcPu33Y7cNuH3b7sNuH3T7s9mF/a5fG/uq+9fr/30UMRCc=
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgEAMQNGANjeCpZO4gyMcWLu2pSN4jeX9gFwlPxBSPNL8tZ77MUXE
+0ra0neOde/t2s/+/u33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+
+7PZhtw+7fdjtw24fdvuw24fdPuz2YR91r84d9Z95b/L/Bz1cRA8=
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyD44rHiHw521f8xAR
+U9lUdow65/Ls9t7/3e3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2
+YbcPu33Y7cNuH3b7sNuH3T7s9mG3D/tX92jcu/72tqb//wVCDEQn
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyA8cVj0vx521f8xAR
+U5lUZoz6zuXZ7t3/3e3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2
+YbcPu33Y7cNuH3b7sNuH3T7s9mG3D/tX+2jsu/72/9br3186XEQP
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbRzB0kncwREC1q5t6QimSSPkRySV/MBxxSMpfpZ0bPsQ
+EXOeKc8Y5Vzrt926/3e3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw
+24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7svfZZ2b387T8+T/v9GzdcRA8=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/EMRC/sFxxeOav535SFNE
+rHWXunM8c+1jt/f/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuxv3dK4X3lr+v83L6xD9w==
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyA8cVj4Tw521f8xAR
+U5lUZox6zuXZ7t3/u9uH3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjt
+w24fdvuw24fdPuz2YbcPu33Y7cNuH/a7+2jst+9+tVun//8LTLxEPw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyA+GKxyXw521f8xAR
+U7mp3DHqOZdns7f/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPux359GYb9/96v/W6e9fRQxEJw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyA8cVj1zx521f8xAR
+U5lUZoz6zuXZ7v3/u9uH3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjt
+w24fdvuw24fdPuz2YbcPu33Y7cNuH/a7+2jst3e/ut96/fsXQgxEJw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwREEa9e2dATTpMy/oJ38g3DFI1f8ZT+3Y4iI
+ubypvDHq3Ou7nf3/u9uH3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjt
+w24fdvuw24fdPuz2YbcPu33Y7cNuH/befTX217u99zNvTf7/ATpcRA8=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbRzB0kncwREC1q5t6QimSSPkJ1hYyA8cVzxC4GdJx7YP
+ETHnmfKMUc61vtut+393+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2YbcP
+u33Y7cNuH3b7sNuH3T7s9mG3D7t92O3D3rvPyv7qfu8/Pk/7/Rs/DEQn
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/wUrkHxxXPK7525mPNEXE
+WnepO8cz1/7u9v7/7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh330lsb9yn9r+v83N1xEDw==
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyD8IVj1zx521f8xAR
+U3mpvDHqnMuz3fv/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPux399HYX/1/e781/fsXNFxEDw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyD44rHtf8edvXPETE
+VDaVHaPOuTy7vf+/u33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+
+7PZhtw+7fdjtw24fdvuw24fdPuz2Yb97j8b96v+tt6b/fwEsrEP3
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/QbCRf3Bc8QiEvx7nnqeI
+WMqmsnPUubd3t/f+724fdvuw24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7s9mG3
+D7t92O3Dbh92+7Dbh90+7PZhtw+7fdhH79W4o/71bU3/fw88DEQn
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/QbCRHziueByBvx7nnqeI
+WMqkMnPUd2/vdu/+724fdvuw24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7s9mG3
+D7t92O3Dbh92+7Dbh90+7PZhtw+7fdhH99XYo/71/63Xv38ANFxEDw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbRzB0kncwREEa9e2dATTpBH8ObSTfxCueCTFz7Tuy9ZF
+xFjOUE4fdc753W7d/7vbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y
+7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh/27D4edta/vp/9x/u0378AMVxEDw==
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/QbCRHziueFyKvx7nnqeI
+WMqkMnPUd2/vdu/+724fdvuw24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7s9mG3
+D7t92O3Dbh92+7Dbh90+7PZhtw+7fdhH99XYo/71/63Xv38AKaxD9w==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyD44rHiHw521f8xAR
+U9lUdow65/Ls9t7/3e3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2
+YbcPu33Y7cNuH3b7sNuH3T7s9mG3D/vdezTuV/72tqb//wUuXEQP
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbTKCpZO4gyMIqV3b0hFMkzI/olbyA8cVjyPw521f8xAR
+U5lUZoz6zuXZ7t3/3e3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2
+YbcPu33Y7cNuH3b7sNuH3T7s9mG3D/vdfTT2V/72/9br318mrEP3
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbRzB0kncwREC1q5t6QimSSPkJ1hYyA8cVzyS4mdJx7YP
+ETHnmfKMUc61vtut+393+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2YbcP
+u33Y7cNuH3b7sNuH3T7s9mG3D7t92O3D3rvPyv7Ke//xedrv3yOsQ/c=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncwRGE1Fk7pSOYxjI/wUrkHxxXPK7525mPNEXE
+WnepO8cz1/7u9v7/7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh330lsb9irem/38DG/xD3w==
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+IIWF/IPjik+KvO24ypki
+Itdd6y7R5tnn7uj937s+3PXhrg93fbjrw10f7vpw14e7Ptz14a4Pd32468Nd
+H+76cNeHuz7c9eGuD3d9uOvDXR/u+nBv9+7cWdevb2/G/3sBSbxEPw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncISMI1q5t6QimSZl/EKzkB44rHgfhb8dVziki
+1jpLnTnae/axnd3/3e3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2
+YbcPu33Y7cNuH3b7sNuH3T7s9mG3D3vbd2ePdv16Z//rvfz+BUIMRCc=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/GDv5geOKRxL465H3c4qI
+VGYpM0c99za2e/f/7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh73uq7FHu77dX/9vnf77Dz8MRCc=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncISMI1q5t6QimSZl/mFJ+4LjicQT+dlzlnCJi
+rbPUmaO9Zx/b2f3f3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24f
+dvuw24fdPuz2YbcPu33Y7cNuH3b7sLd9d/Zo1687+z/z3svvXzdcRA8=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+IIWF/MBxxScJvO24ypki
+ItdZ6yzRzrPP7dH9v3d9uOvDXR/u+nDXh7s+3PXhrg93fbjrw10f7vpw14e7
+Ptz14a4Pd32468NdH+76cNeHuz7c9eHe9t3Zs65fv9874/9fPAxEJw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncISMI1q5t6QimSZl/EKzkB44rHpfib8dVziki
+1jpLnTnae/axnd3/3e3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2
+YbcPu33Y7cNuH3b7sNuH3T7s9mG3D3vbd2ePdv36/+y+9/L7FzRcRA8=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/GDv5geOKTxJ465H3c4qI
+VGYpM0c99za2e/f/3vXhrg93fbjrw10f7vpw14e7Ptz14a4Pd32468NdH+76
+cNeHuz7c9eGuD3d9uOvDXR/u+nDXh3vdV2OPur59/+v/rdN//wExXEQP
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/GDv5geOKx6X465H3c4qI
+VGYpM0d99za2e/d/d/uw24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7s9mG3D7t9
+2O3Dbh92+7Dbh90+7PZhtw+7fdjtw1731dijXd/+/9Vbr3//ACmsQ/c=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/Yjr5geOKx0H465H3c4qI
+VGYpM0d99/Zt9+7/7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh73uq7Hfdhy9H92t1//fAzkMRCc=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/Yjr5geOKx6X465H3c4qI
+VGYpM0d99/Zt9+7/7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh73uq7Hfdhy9H/2/9fr3DzFcRA8=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+xEaQHziu+FyKt2xH2VNE
+5DpznSnau9Z3e3T/964Pd32468NdH+76cNeHuz7c9eGuD3d9uOvDXR/u+nDX
+h7s+3PXhrg93fbjrw10f7vpw14e7PtzbPjv7qePX9703/v8GLlxEDw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgEAMQNGANo5g6STucCMI1q5t6Qhec+X9iGAjPxBSPNL8ZTvKPkTE
+XHeqO0aba313s/+/u33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+
+7PZhtw+7fdjtw24fdvuw24fdPuz2YW/37NynHb/+z7w3+f8NJqxD9w==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbRzB0kncwREEa9e2dATTpBH8F7STHwhXfJLAy7Tuy9ZF
+xFj2UHYfdZ3zu5md/3vXh7s+3PXhrg93fbjrw10f7vpw14e7Ptz14a4Pd324
+68NdH+76cNeHuz7c9eGuD3d9uOvDXR/udR4Ps9UxO//1/tZ/vK/8/QsrXEQP
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncISMI1q5t6QimSZl/ItjIDxxXPC7FX7aj7ENE
+zHWmOmO0d63vdnb/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuxtn539tGN2//X/vZff3yOsQ/c=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbRzB0kncwREEa9e2dATTpBH8F7STHziueCTFz7Tuy9ZF
+xFhmKNNHPef8bmf3/+72YbcPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92
++7Dbh90+7PZhtw+7fdjtw24fdvuw24e97uNht3bM7n/11n+8n/z9CyCsQ/c=
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgEAMQNGANo5g6STucCMI1q5t6Qhec+X9iGAjPxBSPNL8ZTvKPkTE
+XHeqO0aba313s/+/u33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Dbh90+
+7PZhtw+7fdjtw24fdvuw24fdPuz2YW/37NynHbP/r703+f8NGPxD3w==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+xEaQf3Bc8QiEv2xH2VNE
+5Lpz3SnaXOu7O3r/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuztnp371L++vRn//wY2DEQn
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncISMI1q5t6QimSZl/ItjIDxxXPI7AX7aj7ENE
+zHWmOmO0d63vdnb/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuxtn5391L/e2f+9l9/fLlxEDw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/Yjr5B8cVj6T465H3c4qI
+VHYpO0ede/t2e+//7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh73eq3Hf+ugd/b81/f8fK1xEDw==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/Yjr5geOKxxH465H3c4qI
+VGYpM0d99/Zt9+7/7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh73uq7Hf+uge/b/1+vcPI6xD9w==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/Yjr5geOKRxL465H3c4qI
+VGYpM0c99/Zt9+7/3e3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2
+YbcPu33Y7cNuH3b7sNuH3T7s9mG3D3vdV2O/9dH3R3fr9P9/AChcRA8=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRwhpZO4gyMI1lnb0hFMkzI/Yjr5geOKx6X465H3c4qI
+VGYpM0d99/Zt9+7/7vZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNuH3b7
+sNuH3T7s9mG3D7t92O3Dbh92+7Dbh73uq7Hf+uj/o/et179/ACCsQ/c=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+xEaQf3Bc8UiKv2xH2VNE
+5Lpz3SnaXOu7O3r/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuztnp371L/+vzfj/28drEP3
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncISMI1q5t6QimSZl/ItjIDxxXPC7FX7aj7ENE
+zHWmOmO0d63vdnb/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuxtn5391L/+P/Pey+9vFfxD3w==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+QLSRf3Bc8QiEv2xH2VNE
+5Lpz3SnaXOuzO3r/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuztnp37ln99ezP+3w0lXEQP
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDbRzB0kncISMI1q5t6QimSZl/oFbyA8cVj0vxl+0o+xAR
+c52pzhjtXeuznd3/3e3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2
+YbcPu33Y7cNuH3b7sNuH3T7s9mG3D3vbZ2d/5W939n/v5fc3HaxD9w==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAUANEP2jiCpZO4gyMErF3b0hFMk0bIRdRKLhB+8UgClylty9pF
+xJj3kHcfZR3zs9k6/3e3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24fdvuw
+24fdPuz2YbcPu33Y7cNuH3b7sNuH3T7sZe6V+ZW/ff/uP15X+/4TGqxD9w==
+
+     "], {{0, 0}, {9, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+QLSRHziueByBv2xH2VNE
+5DpznSnau9Zne3T/d7cPu33Y7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh92+7Db
+h90+7PZhtw+7fdjtw24fdvuw24fdPuxtn539ln/9f++N728S/EPf
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+QMFC/sFxxSME/rIdZU8R
+kevOdadoc63P7uj9390+7PZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNu
+H3b7sNuH3T7s9mG3D7t92O3Dbh92+7C3e3buV/729mb8/w0XrEP3
+     "], {{0, 0}, {9, 
+     25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxh4wgWLu2pSOYJmV+QMFCfuC44nEQ/rIdZU8R
+kevMdaZo71qf7dH9390+7PZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y7cNu
+H3b7sNuH3T7s9mG3D7t92O3Dbh92+7C3fXb2V/72f703vr8BD/xD3w==
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDbTKCpZO4gyMErF3b0hFMkybgj1iJ/MBxxSMpfua8r9sQ
+EVOZVGaMes7l3e7d/7vbh90+7PZhtw+7fdjtw24fdvuw24fdPuz2YbcPu33Y
+7cNuH3b7sNuH3T7s9mG3D7t92O3Dbh/2uo+b/RV/+o/t6b9/AQz8Q98=
+     "], {{0, 0}, {9,
+      25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNGD2DhCSidxB0cQrLN2SkcwTcr8gJ3yD44rHtf87SzHlSIi
+t13bLtHn3t/d2f/f3T7s9mG3D7t92O3Dbh92+7Dbh90+7PZhtw+7fdjtw24f
+dvuw24fdPuz2YbcPu33Y7cNuH3b7sPdbB/crPpr5/wMFTEPH
+     "], {{0, 0}, {9, 25}}, {
+     0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncwREEa9e2dATTpDwCfpvgPwhXPK7IX/ZzO4aI
+mMubyhujzr2+2637v7v9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9
+mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y2495Lzub6leyv7pvee87G/r/iAfIXKBi
+
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATT2ARCwI8S8AeOKx4p8sm07svW
+RcSYZkjTx33O+dmu3f+724+5/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y
+24+5/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mLeyj8LO35Gfr+7XvPX9dp/y/7sA
+kfygMg==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAUANEPWrmBpZO4gyMI1q5t6QimsRGCiQcWeoHwi0dCuAzzOi1N
+RPRpd2m3ca59fDbvzv/d7cfcfsztx9x+zO3H3H7M7cfcfsztx9x+zO3H3H7M
+7cfcfsztx9x+zO3H3H7M7cfcfsztx9x+zN+aW2bW/uN1ld5Pz9P3f71v/t4D
+i/ygMg==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTpAwRPySFP3Bc8bjmk2U/t2OI
+iDnNlGaM/O71267d/93tx9x+zO3H3H7M7cfcfsztx9x+zO3H3H7M7cfcfszt
+x9x+zO3H3H7M7cfcfsztx9x+zO3H3H7MW+2rsN966bW6r3nv3btv+f89VZyg
+Ag==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncwREEa9e2dATTWB6KPxbiD4QrPknIG+Z1WpqI
+6Mvuym7jXPv4bF6d/3vXj3X9WNePdf1Y1491/VjXj3X9WNePdf1Y1491/VjX
+j3X9WNePdf1Y1491/VjXj3X9WNePdf1YrzW3ZNa6P1t336fn3/7f133zew+F
+/KAy
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTpDwEf7DQHwhXPK7IJ9O6L1sX
+EWO5Q7l91HPOz+bd/t/dfsztx9x+zO3H3H7M7cfcfsztx9x+zO3H3H7M7cfc
+fsztx9x+zO3H3H7M7cfcfsztx9x+zO3HvNU8ktlqPztv7dP3fb1v/v8uT5yg
+Ag==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDrdzA0kncwREEa9e2dATT2AjBw2+lPxCueCSEn2Fep6WJ
+iL7sruw2zrWPz+bd+b+7/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y24+5
+/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuP+Vtzq8ysZ//xurL30/P0/V/vW7/3
+AEmcoAI=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTWB4Bf7DJDxxXPK75ZNnP7Rgi
+Yi4zlRnjfff6bdfue3f7Mbcfc/sxtx9z+zG3H3P7Mbcfc/sxtx9z+zG3H3P7
+Mbcfc/sxtx9z+zG3H3P7Mbcfc/sxtx/zVvtKdivP3l/3Ne+9b/7/HhM8n9I=
+
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAUANEPWrmBpZO4gyMI1q5t6QimSSMEo4eFeIHwi0eCOYd5nZYm
+Ivq0u7TbyGsfn82r8393+zG3H3P7Mbcfc/sxtx9z+zG3H3P7Mbcfc/sxtx9z
++zG3H3P7Mbcfc/sxtx9z+zG3H3P7Mbcf89q5FSa99+5/PK/a76Pn337/1/uW
+7z0Af/ygMg==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTWB4GP6jgD4QrHgnkk2Fep6WJ
+iL7sruw2zrWP9+bV+b+7/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y24+5
+/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPee3ckknvrb0/W0+df/v9X++b/78D
+SZygAg==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncwREEa9e2dATTpDwMfrDQHwhXPC6EP637snUR
+MZY7lNtHPef8bN7t/93tx9x+zO3H3H7M7cfcfsztx9x+zO3H3H7M7cfcfszt
+x9x+zO3H3H7M7cfcfsztx9x+zO3H3H7MW+eRzLf2s9P6Pt2n//963/zdC0Oc
+oAI=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTWB4Rv1joD4QrHlfkk2Fep6WJ
+iL7crtw2zrOP92Zt/+9uP+b2Y24/5vZjbj/m9mNuP+b2Y24/5vZjbj/m9mNu
+P+b2Y24/5vZjbj/m9mNuP+b2Y24/5vZjfnVuyXxqv+bZeWufvv/rffP/dwAN
+PJ/S
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncwREEa9e2dATTpDwMfsTCHwhXPMKRP637snUR
+MZY7lNtHPef8bN69/7vbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y24+5/Zjb
+j7n9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Yt84jma1OZ3Za99P3b//v6/3Zofsj
+Lj2coAI=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTpDwMfrDQHwhXPBLIJ9O6L1sX
+EWPZQ9l91HXOz+bd+b+7/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y24+5
+/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPees8ktnq9P5svXWevu/rffP/dwEH
+PJ/S
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDrdzA0kncwREEa9e2dATT2AjBw2+lPxCueCSEn2Fep6WJ
+iL7sruw2zrWPz+bd+b+7/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y24+5
+/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPeXZulfmWZ//xurL30/P0/V/vW7/3
+AAE8n9I=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTWB4RP6TJDxxXPK75ZNnP7Rgi
+Yi4zlRnjfff6b9fue3f7Mbcfc/sxtx9z+zG3H3P7Mbcfc/sxtx9z+zG3H3P7
+Mbcfc/sxtx9z+zG3H3P7Mbcfc/sxtx/zr/tKdivPXqv7mvfeN/9/D8rNn6I=
+
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncwREEa9e2dATTpDyUfCv9gXDF50J407ovWxcR
+Y7lDuX3Uc85t827/710/1vVjXT/W9WNdP9b1Y10/1vVjXT/W9WNdP9b1Y10/
+1vVjXT/W9WNdP9b1Y10/1vVjXT/W9WO9ziOZre5vz+w8/T/dpz5f983fvQB5
+/KAy
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncISMI1q5t6QimSRmC+WChP3Bc8QmBR5btSPsQ
+EXOeKc8Y5Vxr327d/3vXj3X9WNePdf1Y1491/VjXj3X9WNePdf1Y1491/VjX
+j3X9WNePdf1Y1491/VjXj3X9WNePdf1YL/us7F73p7v1fu28dZ/6fN23/v9u
+Q5ygAg==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncwREEa9e2dATTpDyUfCv9gXDFJ0d407ovWxcR
+Y7lDuX3Uc85t8+7937t+rOvHun6s68e6fqzrx7p+rOvHun6s68e6fqzrx7p+
+rOvHun6s68e6fqzrx7p+rOvHun6s68d6nUcyW93f3p+dp/vpe/r/r/vmey89
+nKAC
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncISMI1q5t6QimSRmC+WChP3Bc8UmKR5btSPsQ
+EXOeKc8Y5Vxr327d/3vXj3X9WNePdf1Y1491/VjXj3X9WNePdf1Y1491/VjX
+j3X9WNePdf1Y1491/VjXj3X9WNePdf1YL/us7F73p++3eu28dZ/6fN23/v9u
+Bzyf0g==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDrdzA0kncwREEa9e2dATTpAkEg79Q8AfCFZ9TeJnWfdm6
+iBjTHdLtI59zfjbv9v/e9WNdP9b1Y10/1vVjXT/W9WNdP9b1Y10/1vVjXT/W
+9WNdP9b1Y10/1vVjXT/W9WNdP9b1Y10/1vM8KrPVme63vmN5Wv9P99/2+bpv
+/bsXN5ygAg==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0r0JgDAQQOEDrdzA0kncISMI1q5t6QimSRkUH/6AL3Bc8bjmI8O0pLmJ
+iD5Pl6eN8rbx2j66/3vXj3X9WNePdf1Y1491/VjXj3X9WNePdf1Y1491/VjX
+j3X9WNePdf1Y1491/VjXj3X9WNePdf1YL3ut7LPOd9/X3lP3X/d527f+/3YB
+PJ/S
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncISMI1q5t6QimSRkS/FiIPxCu+NwVb9mOtA8R
+Mec/5T9Gedf6bLb2/971Y10/1vVjXT/W9WNdP9b1Y10/1vVjXT/W9WNdP9b1
+Y10/1vVjXT/W9WNdP9b1Y10/1vVjXT/Wyzwrs9e5tU/v117vfbr/ts/Xfet3
+b/stn9I=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncISMI1q5t6QimSRkifhTEHziu+FzzyLRsae0i
+Yswz5OmjvGO+t1v3f+/6sa4f6/qxrh/r+rGuH+v6sa4f6/qxrh/r+rGuH+v6
+sa4f6/qxrh/r+rGuH+v6sa4f6/qxrh/rZe+VfdW5dU977b11/7TP133r/+8E
+xM2fog==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncwREEa9e2dATTpDwMfmz0B8IVj4TkT+u+bF1E
+jGUPZfdR1zk/m3fn/+72Y24/5vZjbj/m9mNuP+b2Y24/5vZjbj/m9mNuP+b2
+Y24/5vZjbj/m9mNuP+b2Y24/5vZjbj/mdR7JbPW3Z7Za30fP0/9/vW9+7wUx
+nKAC
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTpDwifrDQHwhXPBLIJ9O6L1sX
+EWPZQ9l91HXOz2br/N/dfsztx9x+zO3H3H7M7cfcfsztx9x+zO3H3H7M7cfc
+fsztx9x+zO3H3H7M7cfcfsztx9x+zO3HvM4jmXedztb92XrrPH3/1/vm/+8C
++y2f0g==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAQQNEDrdzA0kncwREEa9e2dATTpAkEgx8L8QfCFY8c+J3Wfdm6
+iBjTHdLtI59zfjbv3v/d7cfcfsztx9x+zO3H3H7M7cfcfsztx9x+zO3H3H7M
+7cfcfsztx9x+zO3H3H7M7cfcfsztx9x+zPM8KrPV6f7W/1ie1v30/dvf//W+
+9b0X9S2f0g==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0r0JgDAUAOEHWrmBpZO4Q0YQrF3b0hFMkzIoHv6AFwiv+EggR4ZpSXMT
+EX3eXd5tlLWN1+bR+b+7/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPuf2Y24+5
+/Zjbj7n9mNuPuf2Y24+5/Zjbj7n9mNuPeZlrZZ71u++vrafOv/3+r/et/78d
+vs2fog==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNEDrdzA0kncISMI1q5t6QimSXkofiv9gXDFIwn507KVtYuI
+se6h7j7aOuZn8+r8391+zO3H3H7M7cfcfsztx9x+zO3H3H7M7cfcfsztx9x+
+zO3H3H7M7cfcfsztx9x+zO3H3H7M7ce8zT2Zbzmd2br7Pj1P//f1vvm9J+8t
+n9I=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0L0JgDAQQOEDrdzA0kncwREEa9e2dATTpDwEnz+F7yCk+AhH3jCv09JE
+RF9OV04bdfbx2n32/u9uP+b2Y24/5vZjbj/m9mNuP+b2Y24/5vZjbj/m9mNu
+P+b2Y24/5vZjbj/m9mNuP+b2Y24/5vZjXu8tue9yuj+bt94//b+v92dD90cc
+uM2fog==
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAUANEPWrmBpZO4gyMI1q5t6QimSRMIBg8s9ALhF4+EcJnWfdm6
+iBjTHtLuI69zfjbvzv/d7cfcfsztx9x+zO3H3H7M7cfcfsztx9x+zO3H3H7M
+7cfcfsztx9x+zO3H3H7M7cfcfsztx9x+zPM8KvMtb/3HcrXeT8/T93+9b/3e
+C7LNn6I=
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNEDrdzA0kncwREEa9e2dATTpDwCfhAhP3Bc8bjmk2U/t2OI
+iLnMVGaM+u713W7d9+72Y24/5vZjbj/m9mNuP+b2Y24/5vZjbj/m9mNuP+b2
+Y24/5vZjbj/m9mNuP+b2Y24/5vZjbj/mdV/J/otn76v7lvfeN/9/D3xtn3I=
+
+     "], {{0, 0}, {10, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0LEJgDAQQNED7ZzA0kncwREEa9e2dARt0igxEPiS4h+EKx4R86d1X7Yu
+Isb7DPfpI8051+3Sff3b7cu6fVm3L+v2Zd2+rNuXdfuybl/W7cu6fVm3L+v2
+Zd2+rNuXdfuybl/W7cu6fVm3L+v2Zd2+rLeyc5P8yOxW7pe89Z2bv/qV/sv+
+de97fuftF1rq+d8=
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0r0JgDAUAOEH2jmBpZO4gyMI1q5t6Qja2EQ0EDh/4ALhFR8J8bAb52Gq
+IqLdd7PvOo619mUzd16/d/uybl/W7cu6fVm3L+v2Zd2+rNuXdfuybl/W7cu6
+fVm3L+v2Zd2+rNuXdfuybl/W7cu6fVm3L+tPzeVipu9M11/O5/zt+fV+uf/X
+/mXfl95z9g3Fy/mX
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0TEOQDAYQOEmbE5gdBJ3cASJ2bWNjsBiqVDKi8Fr0nT40j/6NP3YDUUI
+oV53te4ybGtu887Uff3c7cu6fVm3L+v2Zd2+rNuXdfuybl/W7cu6fVm3L+v2
+Zd2+rNuXdfuybl/W7cu6fVm3L+v2Zd2+rL91Tgfn3f8Yr6vzv77/9P1/75/6
+LvvnzY/n7H0BvMv5lw==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNED7ZzA0kncwREEa9e2dARtbJQkEvyF8APhiscJfjLM67Q0
+EdGftztvG9fZx7pZ2tfzbl/W7cu6fVm3L+v2Zd2+rNuXdfuybl/W7cu6fVm3
+L+v2Zd2+rNuXdfuybl/W7cu6fVm3L+v2Zf2ruSXmW0+dv+yX3P75/dL7tX/d
+/92/8/QDJ7v5Tw==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0L0JgDAUAOGAdk5g6STu4AiCtWtbOoJpbCKaEDkEuUB4xUd+uGFep6UJ
+IfRxd3G34Vz7WDdz5/Vnty/r9mXdvqzbl3X7sm5f1u3Lun1Zty/r9mXdvqzb
+l3X7sm5f1u3Lun1Zty/r9mXdvqzbl3X7sl46t5v59t70n+kqff/r83Sfv/fP
+/cv+de+n91z9ALPL+Zc=
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAUANGAdk5g6STu4AiCtWtbOoJpbJQYiV4hXiD84vEVjnTjPExV
+CKGNt4m3DvtZ+7KZ29ev3b6s25d1+7JuX9bty7p9Wbcv6/Zl3b6s25d1+7Ju
+X9bty7p9Wbcv6/Zl3b6s25d1+7JuX9bty/rduSTmW/up85X9p33+3j/3fu1f
+9v/jd86+AR67+U8=
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAUANGAdk5g6STu4AiCtWtbOoJpbCKaEDksvEBI8cjHnMO8TksT
+Qujj7uJuw7n2se7M3def3b6s25d1+7JuX9bty7p9Wbcv6/Zl3b6s25d1+7Ju
+X9bty7p9Wbcv6/Zl3b6s25d1+7JuX9bty3rpud2cpV76H9NVOv/r+2/f//f+
+ue+yf938dM7VDxW7+U8=
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNED7ZzA0kncwREEa9e2dARtbJQkEvyF8APhiscJfjLM67Q0
+EdGftztvG9fZx7pZ2tfzbl/W7cu6fVm3L+v2Zd2+rNuXdfuybl/W7cu6fVm3
+L+v2Zd2+rNuXdfuybl/W7cu6fVm3L+v2Zf3t3BLzK0+dv+yX3P75/dL7tX/d
+/92/8/QDgJz5Bw==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0TEKgCAYQGGhtk7Q2Em6Q0cImrt2Y0fIxcUow3g09AT5h4cin8O8TksT
+Qujj7uJuQ1r7WDdL5+33XV+268t2fdmuL9v1Zbu+bNeX7fqyXV+268t2fdmu
+L9v1Zbu+bNeX7fqyXV+268t2fdmuL9v1ZXua28Ws/Zfaf8zX0/d9ff6t39/9
+S+/Sv+59+T3nfgCqy/mX
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAUANGAdk5g6STu4AiCtWtbOoJp0igxGLlCvED4xZEgLw7zOi1N
+CKGPu4u7DWntY90snbffd33Zri/b9WW7vmzXl+36sl1ftuvLdn3Zri/b9WW7
+vmzXl+36sl1ftuvLdn3Zri/b9WW7vmzXl+1pbplZ+y5P78+tr5x/6/d3/9L/
+q3/d953vufYDFbv5Tw==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0bEJgDAUANGAdk5g6STu4AiCtWtbOoJp0ihqiBxBuEBIcfyPPId5nZYm
+hNDH28XbhnT2sex9m7c/d33Zri/b9WW7vmzXl+36sl1ftuvLdn3Zri/b9WW7
+vmzXl+36sl1ftuvLdn3Zri/b9WW7vmzXl+3p3W7e3P/wdf7u5O6vPV/b7+/+
+b9+lf9n+855rPwAMu/lP
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNGAdk5g6STu4AiCtWtbOoI2aZR4EviF8gPhiseJfB3mdVqa
+lFJ/3u68bcpnH+tmtK8/u31Zty/r9mXdvqzbl3X7sm5f1u3Lun1Zty/r9mXd
+vqzbl3X7sm5f1u3Lun1Zty/r9mXdvqzbl/U8t8J8+x2i/chL5yv7dL+/94/+
+X/vXvd/1OXc/AHec+Qc=
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0L0JgDAUAOGAdk5g6STu4AiCtWtbOoJp0ihqSDgsvEB4xUd+uGFep6UJ
+IfRxd3G3Ia19LJtv5/Vnty/r9mXdvqzbl3X7sm5f1u3Lun1Zty/r9mXdvqzb
+l3X7sm5f1u3Lun1Zty/r9mXdvqzbl3X7sp7mdjNzvXberdz3vz5f2+fv/d/+
+Zf+y98/3XP0AA7v5Tw==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1L0JgDAUAOGAdk5g6STu4AiCtWtbOoJpUsZI5PCHC4RXHEnxETLM67Q0
+IYQ+7i7uNqS1j3WzdN5+3vVlu75s15ft+rJdX7bry3Z92a4v2/Vlu75s15ft
++rJdX7bry3Z92a4v2/Vlu75s15ft+rJdX7anuWXm1X73/tz6ynna5+/+pff7
+tM/b/ev/hwNunPkH
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0TEOQDAYQOEmbE5gdBJ3cASJ2bWNjqCLhdCmvBi8Jk2HL/2jTzfOw1SF
+ENq4m7jrsK+1LztT9/V7ty/r9mXdvqzbl3X7sm5f1u3Lun1Zty/r9mXdvqzb
+l3X7sm5f1u3Lun1Zty/r9mXdvqzbl3X7sr6fy8X5luf+x+PKnf/1/afv/3v/
+1HfZv2z+cc7ZN2Wc+Qc=
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt0rEJgDAQQNED7ZzA0kncwREEa9e2dARt0ihJIPAF4QfCFY8T/GRa92Xr
+ImK873DfPtI557ZZ29fLbl/W7cu6fVm3L+v2Zd2+rNuXdfuybl/W7cu6fVm3
+L+v2Zd2+rNuXdfuybl/W7cu6fVm3L+v2ZT3NIzO/8tz5y37N7V/er71f+7f9
+3/M7b78A0H34vw==
+     "], {{0, 0}, {11, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAli5g6STu4AiCtWtbOoJpUoaAHz0IFwgpHr/IBbLs53YM
+KaU57ynvMZV1r+/O1rwec/uzbn/W7c+6/Vm3P+v2Z93+rNufdfuzbn/W7c+6
+/Vm3P+v2Z93+rNufdfuzbn/W7c+6/Vn/66yt4lfl7GW+5fQZvR8937qX7xOb
+j/4/0f69v893//8D2rFQ3Q==
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAli5g6STu4AiCtWtbOoJpbAIS8CsHeoGQ4vFBLpJhXqel
+SSn1eXd5t+lc+3jvrM3rMbc/6/Zn3f6s2591+7Nuf9btz7r9Wbc/6/Zn3f6s
+2591+7Nuf9btz7r9Wbc/6/Zn3f6s25/1p87t4iy/o1x/ma+59xObr/3/3k9s
+Pvr+RPt//X7ee/8PreJQfQ==
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAli5g6STu4AiCtWtbOoI2NoJG/cihXCCkeETwPqTpx24o
+Ukr1uqt1l2lbc/vszN3XY25/1u3Puv1Ztz/r9mfd/qzbn3X7s25/1u3Puv1Z
+tz/r9mfd/qzbn3X7s25/1u3Puv1Ztz/rV8/p4Lw7x/26+v2v34/2cz7n93P/
+5Xxi96PvT7T/3+fz3vu/AKHiUH0=
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAli5g6STu4AiCtWtbOoJpLEOCHznQC4QUj194kUzrvmxd
+SmnMe8i7T/c652dnbV6Puf1Ztz/r9mfd/qzbn3X7s25/1u3Puv1Ztz/r9mfd
+/qzbn3X7s25/1u3Puv1Ztz/r9mfd/qy3nkfhbPXS+st8zb2f2Hzt//d+YvPR
+9yf6/V+/n/fe/wt1E1Ad
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAli5g6STu4AiCtWtbOoI2NoJG8pFDOSGkeHzUC6Qb52Gq
+Ukrtvpp91el41r5sz83rMbc/6/Zn3f6s2591+7Nuf9btz7r9Wbc/6/Zn3f6s
+2591+7Nuf9btz7r9Wbc/6/Zn3f6s25/1Y18u9tJzu/qO8/P0/V+fj/b1fO7n
+c//l+cTmo/dPtP/fz+e9+38DleJQfQ==
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAli5g6STu4AiCtWtbOoJpUoaIIRyYC4QUj9/cF5f93I4h
+hDDHO8U7hnTu9dtbmtfr3P6s2591+7Nuf9btz7r9Wbc/6/Zn3f6s2591+7Nu
+f9btz7r9Wbc/6/Zn3f6s2591+7Nuf9bTe2Xet3sqzedOL/Ot+/a+n9L3737q
+5mv/P7X9/76fdv//B2kTUB0=
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAli5g6STu4AiCtWtbOoI2aQQ1+JFDuUBI8YjgfUg3zsNU
+pZTafTf7rlNea//svLuvx9z+rNufdfuzbn/W7c+6/Vm3P+v2Z93+rNufdfuz
+bn/W7c+6/Vm3P+v2Z93+rNufdfuzbn/W87mcnKVeOsfjKv3+1+9H+zmf6/t3
+/+V8Yvej70+0z9/n8977vwFdE1Ad
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1LEJgDAUANGAli5g6STu4AiCtWtbOoI2KUPAbzjEC4QUj99cQqZ1X7Yu
+pTTee7h3n/I652dnbV6Puf1Ztz/r9mfd/qzbn3X7s25/1u3Puv1Ztz/r9mfd
+/qzbn3X7s25/1u3Puv1Ztz/r9mfd/qzn8yicb3lp/WW+5t5PbL72/r2f2Hz0
+/2nd5+v30+7/vwAwRE+9
+     "], {{0, 0}, {12, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1TEOQEAQQNFJaB1A6STu4AgStWsrHYFGKQQTX/xNNlP8TOMltunHbigi
+ol5vtd4ytjO31+bRvj2368Pu+rC7PuyuD7vrw+76sLs+7K4Pu+vD7vqwuz7s
+rg+768Pu+rC7PuyuD7vrw+76sLs+7P7U3Dtbn3am++e6frn7R99Fv9z9u/+3
+uz5/98t+f7J9vu731vsfsQCIW6U+
+     "], {{0, 0}, {13, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1rEJgDAUANGAtg5g6STu4AiCtWtbOoI2NgGJKB9PvEBIcXwsHlG7cR6m
+KqXU7rvZd52Otfb3ztK8Pbbrw+76sLs+7K4Pu+vD7vqwuz7srg+768Pu+rC7
+PuyuD7vrw+76sLs+7K4Pu+vD7vqwuz7sfvVcTs78Ofly/tp8qesXO1+6P/rF
+zj99vz31+btf9Pcn2ufrfu/9H2yBzaTG
+     "], {{0, 0}, {13, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}], ",", 
+   GraphicsBox[RasterBox[CompressedData["
+1:eJzt1r0JgDAUAOGAtg5g6STu4AiCtWtbOoJpbATxJwRPcoGQ4ngW+UDtxnmY
+qhBCG3cTdx32tfbvzqt5e96uD7vrw+76sLs+7K4Pu+vD7vqwuz7srg+768Pu
++rC7PuyuD7vrw+76sLs+7K4Pu+vD7vqw+34uJ+dTx+O6+/zS51PvX7+0+at7
+0S/vfOr7LdWndL/c35/cPn/3++7/YANyzaTG
+     "], {{0, 0}, {13, 25}}, {0, 1}],
+    Frame->Automatic,
+    FrameLabel->{None, None},
+    FrameTicks->{{None, None}, {None, None}}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.568739455214589*^9, 3.568739527787593*^9}, {
+  3.5687397619336977`*^9, 3.568739775200993*^9}}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{"2", "-", 
+  RowBox[{"tag", " ", "system"}]}], "\n", 
+ RowBox[{"Alphabet", ":", 
+  RowBox[{"{", 
+   RowBox[{"a", ",", "b", ",", "c", ",", "H"}], "}"}]}], "\n", 
+ RowBox[{"Production", " ", 
+  RowBox[{"rules", ":", 
+   RowBox[{
+    RowBox[{"a", "--"}], ">", "ccbaH"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"b", "--"}], ">", "cca"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"c", "--"}], ">", "cc"}], 
+  "\[IndentingNewLine]"}], "\n", "Computation", "\n", 
+ RowBox[{"Initial", " ", 
+  RowBox[{
+  "word", ":", 
+   "baa"}]}], "\n", "acca", "\n", "caccbaH", "\n", "ccbaHcc", "\n", \
+"baHcccc", "\n", 
+ RowBox[{"Hcccccca", " ", 
+  RowBox[{
+   RowBox[{"(", "halt", ")"}], "."}]}]}], "Input",
+ CellChangeTimes->{{3.568920033966736*^9, 3.5689200349590178`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tag2", "[", 
+   RowBox[{"x_", ",", "a_", ",", "b_", ",", "c_"}], "]"}], ":=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {"x", 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "0"}]},
+        {
+         RowBox[{"Delete", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{"a", ",", "x"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "1", "}"}], ",", 
+             RowBox[{"{", "2", "}"}]}], "}"}]}], "]"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "1"}]},
+        {
+         RowBox[{"Delete", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{"b", ",", "x"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "1", "}"}], ",", 
+             RowBox[{"{", "2", "}"}]}], "}"}]}], "]"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "2"}]},
+        {
+         RowBox[{"Delete", "[", 
+          RowBox[{
+           RowBox[{"Join", "[", 
+            RowBox[{"c", ",", "x"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "1", "}"}], ",", 
+             RowBox[{"{", "2", "}"}]}], "}"}]}], "]"}], 
+         RowBox[{
+          RowBox[{"First", "[", "x", "]"}], "\[Equal]", "3"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}], "\[IndentingNewLine]", 
+ RowBox[{"Map", "[", 
+  RowBox[{"ArrayPlot", ",", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"tag2", "[", 
+      RowBox[{
+       RowBox[{"IntegerDigits", "[", 
+        RowBox[{"x", ",", "4"}], "]"}], ",", 
+       RowBox[{"IntegerDigits", "[", 
+        RowBox[{"a", ",", "4"}], "]"}], ",", 
+       RowBox[{"IntegerDigits", "[", 
+        RowBox[{"b", ",", "4"}], "]"}], ",", 
+       RowBox[{"IntegerDigits", "[", 
+        RowBox[{"c", ",", "4"}], "]"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "1", ",", "aa"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", "1", ",", "aa"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", "1", ",", "aa"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"c", ",", "1", ",", "aa"}], "}"}]}], "]"}], ",", "2"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.568920036029264*^9, 3.568920118355287*^9}, {
+   3.568920149613825*^9, 3.568920159830777*^9}, 3.568920192704788*^9, {
+   3.568920243692037*^9, 3.568920437909355*^9}, {3.5689204833217688`*^9, 
+   3.5689205391358128`*^9}}]
+},
+WindowSize->{1680, 926},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 226, 5, 27, "Input"],
+Cell[786, 27, 4694, 124, 117, "Input"],
+Cell[CellGroupData[{
+Cell[5505, 155, 128, 2, 27, "Input"],
+Cell[5636, 159, 287, 5, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5960, 169, 123, 2, 27, "Input"],
+Cell[6086, 173, 147, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6270, 181, 120, 2, 27, "Input"],
+Cell[6393, 185, 141, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6571, 193, 123, 2, 27, "Input"],
+Cell[6697, 197, 92, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6826, 204, 121, 2, 27, "Input"],
+Cell[6950, 208, 92, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7079, 215, 473, 11, 43, "Input"],
+Cell[7555, 228, 376, 11, 27, "Output"],
+Cell[7934, 241, 343, 8, 447, "Output"]
+}, Open  ]],
+Cell[8292, 252, 5048, 133, 147, "Input"],
+Cell[CellGroupData[{
+Cell[13365, 389, 394, 9, 43, "Input"],
+Cell[13762, 400, 2384, 56, 43, "Output"],
+Cell[16149, 458, 579, 12, 349, "Output"]
+}, Open  ]],
+Cell[16743, 473, 4814, 126, 112, "Input"],
+Cell[CellGroupData[{
+Cell[21582, 603, 1076, 26, 58, "Input"],
+Cell[22661, 631, 5456, 144, 473, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28154, 780, 756, 22, 58, "Input"],
+Cell[28913, 804, 5261, 142, 473, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34211, 951, 731, 21, 58, "Input"],
+Cell[34945, 974, 5341, 142, 473, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40323, 1121, 729, 21, 58, "Input"],
+Cell[41055, 1144, 5343, 142, 473, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46435, 1291, 729, 21, 58, "Input"],
+Cell[47167, 1314, 5351, 142, 473, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[52555, 1461, 731, 21, 58, "Input"],
+Cell[53289, 1484, 5263, 142, 473, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58589, 1631, 729, 21, 58, "Input"],
+Cell[59321, 1654, 5351, 142, 473, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64709, 1801, 723, 20, 43, "Input"],
+Cell[65435, 1823, 92330, 2219, 3833, "Output"]
+}, Open  ]],
+Cell[157780, 4045, 768, 24, 208, "Input"],
+Cell[158551, 4071, 3773, 104, 100, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

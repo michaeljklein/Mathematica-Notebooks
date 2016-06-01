@@ -1,0 +1,4407 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    190743,       4397]
+NotebookOptionsPosition[    188325,       4321]
+NotebookOutlinePosition[    188663,       4336]
+CellTagsIndexPosition[    188620,       4333]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<GraphUtilities`\>\"", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.577481420327561*^9, 3.577481420776874*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"g", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"1", "\[Rule]", "2"}], ",", 
+    RowBox[{"2", "\[Rule]", "3"}], ",", 
+    RowBox[{"3", "\[Rule]", "1"}], ",", 
+    RowBox[{"1", "\[Rule]", "4"}], ",", 
+    RowBox[{"2", "\[Rule]", "4"}], ",", 
+    RowBox[{"3", "\[Rule]", "4"}], ",", 
+    RowBox[{"4", "\[Rule]", "5"}], ",", 
+    RowBox[{"4", "\[Rule]", "6"}], ",", 
+    RowBox[{"4", "\[Rule]", "7"}], ",", 
+    RowBox[{"6", "\[Rule]", "1"}], ",", 
+    RowBox[{"1", "\[Rule]", "7"}], ",", 
+    RowBox[{"7", "\[Rule]", "2"}], ",", 
+    RowBox[{"2", "\[Rule]", "5"}], ",", 
+    RowBox[{"5", "\[Rule]", "3"}], ",", 
+    RowBox[{"3", "\[Rule]", "6"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.5774817184958353`*^9, 3.577481721026888*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"1", "\[Rule]", "2"}], ",", 
+   RowBox[{"2", "\[Rule]", "3"}], ",", 
+   RowBox[{"3", "\[Rule]", "1"}], ",", 
+   RowBox[{"1", "\[Rule]", "4"}], ",", 
+   RowBox[{"2", "\[Rule]", "4"}], ",", 
+   RowBox[{"3", "\[Rule]", "4"}], ",", 
+   RowBox[{"4", "\[Rule]", "5"}], ",", 
+   RowBox[{"4", "\[Rule]", "6"}], ",", 
+   RowBox[{"4", "\[Rule]", "7"}], ",", 
+   RowBox[{"6", "\[Rule]", "1"}], ",", 
+   RowBox[{"1", "\[Rule]", "7"}], ",", 
+   RowBox[{"7", "\[Rule]", "2"}], ",", 
+   RowBox[{"2", "\[Rule]", "5"}], ",", 
+   RowBox[{"5", "\[Rule]", "3"}], ",", 
+   RowBox[{"3", "\[Rule]", "6"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.577481721516083*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[Rule]", "2"}], ",", 
+     RowBox[{"2", "\[Rule]", "3"}], ",", 
+     RowBox[{"3", "\[Rule]", "1"}], ",", 
+     RowBox[{"1", "\[Rule]", "4"}], ",", 
+     RowBox[{"2", "\[Rule]", "4"}], ",", 
+     RowBox[{"3", "\[Rule]", "4"}], ",", 
+     RowBox[{"4", "\[Rule]", "5"}], ",", 
+     RowBox[{"4", "\[Rule]", "6"}], ",", 
+     RowBox[{"4", "\[Rule]", "7"}], ",", 
+     RowBox[{"6", "\[Rule]", "1"}], ",", 
+     RowBox[{"1", "\[Rule]", "7"}], ",", 
+     RowBox[{"7", "\[Rule]", "2"}], ",", 
+     RowBox[{"2", "\[Rule]", "5"}], ",", 
+     RowBox[{"5", "\[Rule]", "3"}], ",", 
+     RowBox[{"3", "\[Rule]", "6"}]}], "}"}], ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.577481653118155*^9, 3.577481681345622*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+    0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+    1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+    1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+    0.868117661906244, 0.}}, {
+     {RGBColor[0.5, 0., 0.], Arrowheads[{{0.03397044617146337, 0.7}}], 
+      ArrowBox[{1, 2}], ArrowBox[{1, 4}], ArrowBox[{1, 7}], ArrowBox[{2, 3}], 
+      ArrowBox[{2, 4}], ArrowBox[{2, 5}], ArrowBox[{3, 1}], ArrowBox[{3, 4}], 
+      ArrowBox[{3, 6}], ArrowBox[{4, 5}], ArrowBox[{4, 6}], ArrowBox[{4, 7}], 
+      ArrowBox[{5, 3}], ArrowBox[{6, 1}], ArrowBox[{7, 2}]}, {InsetBox[
+       FrameBox["1",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 1], InsetBox[
+       FrameBox["2",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 2], InsetBox[
+       FrameBox["3",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 3], InsetBox[
+       FrameBox["4",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 4], InsetBox[
+       FrameBox["5",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 5], InsetBox[
+       FrameBox["6",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 6], InsetBox[
+       FrameBox["7",
+        Background->RGBColor[1, 1, 0.8],
+        FrameStyle->RGBColor[0.94, 0.85, 0.36],
+        StripOnInput->False], 7]}}],
+   Annotation[#, 
+    VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+     0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+     1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+     1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+     0.868117661906244, 0.}}]& ],
+  AspectRatio->Automatic,
+  FrameTicks->None,
+  PlotRange->All,
+  PlotRangePadding->Scaled[0.1]]], "Output",
+ CellChangeTimes->{{3.577481667654519*^9, 3.577481681907106*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"MatrixForm", "[", 
+  RowBox[{"AdjacencyMatrix", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"1", "\[Rule]", "2"}], ",", 
+     RowBox[{"2", "\[Rule]", "3"}], ",", 
+     RowBox[{"3", "\[Rule]", "1"}], ",", 
+     RowBox[{"1", "\[Rule]", "4"}], ",", 
+     RowBox[{"2", "\[Rule]", "4"}], ",", 
+     RowBox[{"3", "\[Rule]", "4"}], ",", 
+     RowBox[{"4", "\[Rule]", "5"}], ",", 
+     RowBox[{"4", "\[Rule]", "6"}], ",", 
+     RowBox[{"4", "\[Rule]", "7"}], ",", 
+     RowBox[{"6", "\[Rule]", "1"}], ",", 
+     RowBox[{"1", "\[Rule]", "7"}], ",", 
+     RowBox[{"7", "\[Rule]", "2"}], ",", 
+     RowBox[{"2", "\[Rule]", "5"}], ",", 
+     RowBox[{"5", "\[Rule]", "3"}], ",", 
+     RowBox[{"3", "\[Rule]", "6"}]}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.577481078499004*^9, 3.577481101598504*^9}, {
+  3.577481153142334*^9, 3.577481312162634*^9}, {3.5774813666678123`*^9, 
+  3.577481401402132*^9}, {3.57748144984062*^9, 3.577481452448347*^9}, {
+  3.5774815014714413`*^9, 3.577481505216228*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "1", "0", "1", "0", "0", "1"},
+     {"0", "0", "1", "1", "1", "0", "0"},
+     {"1", "0", "0", "1", "0", "1", "0"},
+     {"0", "0", "0", "0", "1", "1", "1"},
+     {"0", "0", "1", "0", "0", "0", "0"},
+     {"1", "0", "0", "0", "0", "0", "0"},
+     {"0", "1", "0", "0", "0", "0", "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[
+   SparseArray[
+    Automatic, {7, 7}, 0, {
+     1, {{0, 3, 6, 9, 12, 13, 14, 15}, {{2}, {4}, {7}, {3}, {4}, {5}, {1}, {
+       4}, {6}, {5}, {6}, {7}, {3}, {1}, {2}}}, {1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1}}]]]]], "Input",
+ CellChangeTimes->{3.5774845540838747`*^9}],
+
+Cell[BoxData[
+ RowBox[{"(", GridBox[{
+    {"0", "1", "0", "1", "0", "0", "1"},
+    {"0", "0", "1", "1", "1", "0", "0"},
+    {"1", "0", "0", "1", "0", "1", "0"},
+    {"0", "0", "0", "0", "1", "1", "1"},
+    {"0", "0", "1", "0", "0", "0", "0"},
+    {"1", "0", "0", "0", "0", "0", "0"},
+    {"0", "1", "0", "0", "0", "0", "0"}
+   }], ")"}]], "Input",
+ CellChangeTimes->{{3.5774845618683434`*^9, 3.5774845622516747`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.577484565266325*^9, 3.577484566918191*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"MatrixPower", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], 
+         "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+         "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], 
+         "}"}]}], "}"}], ",", "i"}], "]"}], "//", "MatrixForm"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "25"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5774815464079638`*^9, 3.5774816077312593`*^9}, {
+  3.577484506285375*^9, 3.577484625871214*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"0", "1", "0", "1", "0", "0", "1"},
+       {"0", "0", "1", "1", "1", "0", "0"},
+       {"1", "0", "0", "1", "0", "1", "0"},
+       {"0", "0", "0", "0", "1", "1", "1"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"0", "1", "1", "1", "2", "1", "1"},
+       {"1", "0", "1", "1", "1", "2", "1"},
+       {"1", "1", "0", "1", "1", "1", "2"},
+       {"1", "1", "1", "0", "0", "0", "0"},
+       {"1", "0", "0", "1", "0", "1", "0"},
+       {"0", "1", "0", "1", "0", "0", "1"},
+       {"0", "0", "1", "1", "1", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"2", "1", "3", "2", "2", "2", "1"},
+       {"3", "2", "1", "2", "1", "2", "2"},
+       {"1", "3", "2", "2", "2", "1", "2"},
+       {"1", "1", "1", "3", "1", "1", "1"},
+       {"1", "1", "0", "1", "1", "1", "2"},
+       {"0", "1", "1", "1", "2", "1", "1"},
+       {"1", "0", "1", "1", "1", "2", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"5", "3", "3", "6", "3", "5", "4"},
+       {"3", "5", "3", "6", "4", "3", "5"},
+       {"3", "3", "5", "6", "5", "4", "3"},
+       {"2", "2", "2", "3", "4", "4", "4"},
+       {"1", "3", "2", "2", "2", "1", "2"},
+       {"2", "1", "3", "2", "2", "2", "1"},
+       {"3", "2", "1", "2", "1", "2", "2"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"8", "9", "6", "11", "9", "9", "11"},
+       {"6", "8", "9", "11", "11", "9", "9"},
+       {"9", "6", "8", "11", "9", "11", "9"},
+       {"6", "6", "6", "6", "5", "5", "5"},
+       {"3", "3", "5", "6", "5", "4", "3"},
+       {"5", "3", "3", "6", "3", "5", "4"},
+       {"3", "5", "3", "6", "4", "3", "5"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"15", "19", "18", "23", "20", "17", "19"},
+       {"18", "15", "19", "23", "19", "20", "17"},
+       {"19", "18", "15", "23", "17", "19", "20"},
+       {"11", "11", "11", "18", "12", "12", "12"},
+       {"9", "6", "8", "11", "9", "11", "9"},
+       {"8", "9", "6", "11", "9", "9", "11"},
+       {"6", "8", "9", "11", "11", "9", "9"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"35", "34", "39", "52", "42", "41", "38"},
+       {"39", "35", "34", "52", "38", "42", "41"},
+       {"34", "39", "35", "52", "41", "38", "42"},
+       {"23", "23", "23", "33", "29", "29", "29"},
+       {"19", "18", "15", "23", "17", "19", "20"},
+       {"15", "19", "18", "23", "20", "17", "19"},
+       {"18", "15", "19", "23", "19", "20", "17"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"80", "73", "76", "108", "86", "91", "87"},
+       {"76", "80", "73", "108", "87", "86", "91"},
+       {"73", "76", "80", "108", "91", "87", "86"},
+       {"52", "52", "52", "69", "56", "56", "56"},
+       {"34", "39", "35", "52", "41", "38", "42"},
+       {"35", "34", "39", "52", "42", "41", "38"},
+       {"39", "35", "34", "52", "38", "42", "41"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"167", "167", "159", "229", "181", "184", "188"},
+       {"159", "167", "167", "229", "188", "181", "184"},
+       {"167", "159", "167", "229", "184", "188", "181"},
+       {"108", "108", "108", "156", "121", "121", "121"},
+       {"73", "76", "80", "108", "91", "87", "86"},
+       {"80", "73", "76", "108", "86", "91", "87"},
+       {"76", "80", "73", "108", "87", "86", "91"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"343", "355", "348", "493", "396", "388", "396"},
+       {"348", "343", "355", "493", "396", "396", "388"},
+       {"355", "348", "343", "493", "388", "396", "396"},
+       {"229", "229", "229", "324", "264", "264", "264"},
+       {"167", "159", "167", "229", "184", "188", "181"},
+       {"167", "167", "159", "229", "181", "184", "188"},
+       {"159", "167", "167", "229", "188", "181", "184"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"736", "739", "751", "1046", "848", "841", "836"},
+       {"751", "736", "739", "1046", "836", "848", "841"},
+       {"739", "751", "736", "1046", "841", "836", "848"},
+       {"493", "493", "493", "687", "553", "553", "553"},
+       {"355", "348", "343", "493", "388", "396", "396"},
+       {"343", "355", "348", "493", "396", "388", "396"},
+       {"348", "343", "355", "493", "396", "396", "388"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1592", "1572", "1587", "2226", "1785", "1797", "1782"},
+       {"1587", "1592", "1572", "2226", "1782", "1785", "1797"},
+       {"1572", "1587", "1592", "2226", "1797", "1782", "1785"},
+       {"1046", "1046", "1046", "1479", "1180", "1180", "1180"},
+       {"739", "751", "736", "1046", "841", "836", "848"},
+       {"736", "739", "751", "1046", "848", "841", "836"},
+       {"751", "736", "739", "1046", "836", "848", "841"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"3384", "3374", "3357", "4751", "3798", "3813", "3818"},
+       {"3357", "3384", "3374", "4751", "3818", "3798", "3813"},
+       {"3374", "3357", "3384", "4751", "3813", "3818", "3798"},
+       {"2226", "2226", "2226", "3138", "2525", "2525", "2525"},
+       {"1572", "1587", "1592", "2226", "1797", "1782", "1785"},
+       {"1592", "1572", "1587", "2226", "1785", "1797", "1782"},
+       {"1587", "1592", "1572", "2226", "1782", "1785", "1797"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"7170", "7202", "7172", "10115", "8125", "8108", "8135"},
+       {"7172", "7170", "7202", "10115", "8135", "8125", "8108"},
+       {"7202", "7172", "7170", "10115", "8108", "8135", "8125"},
+       {"4751", "4751", "4751", "6678", "5364", "5364", "5364"},
+       {"3374", "3357", "3384", "4751", "3813", "3818", "3798"},
+       {"3384", "3374", "3357", "4751", "3798", "3813", "3818"},
+       {"3357", "3384", "3374", "4751", "3818", "3798", "3813"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"15280", "15305", "15327", "21544", "17317", "17287", "17285"},
+       {"15327", "15280", "15305", "21544", "17285", "17317", "17287"},
+       {"15305", "15327", "15280", "21544", "17287", "17285", "17317"},
+       {"10115", "10115", "10115", "14253", "11429", "11429", "11429"},
+       {"7202", "7172", "7170", "10115", "8108", "8135", "8125"},
+       {"7170", "7202", "7172", "10115", "8125", "8108", "8135"},
+       {"7172", "7170", "7202", "10115", "8135", "8125", "8108"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"32614", "32565", "32622", "45912", "36849", "36871", "36824"},
+       {"32622", "32614", "32565", "45912", "36824", "36849", "36871"},
+       {"32565", "32622", "32614", "45912", "36871", "36824", "36849"},
+       {"21544", "21544", "21544", "30345", "24368", "24368", "24368"},
+       {"15305", "15327", "15280", "21544", "17287", "17285", "17317"},
+       {"15280", "15305", "15327", "21544", "17317", "17287", "17285"},
+       {"15327", "15280", "15305", "21544", "17285", "17317", "17287"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"69493", "69438", "69414", "97801", "78477", "78534", "78526"},
+       {"69414", "69493", "69438", "97801", "78526", "78477", "78534"},
+       {"69438", "69414", "69493", "97801", "78534", "78526", "78477"},
+       {"45912", "45912", "45912", "64632", "51889", "51889", "51889"},
+       {"32565", "32622", "32614", "45912", "36871", "36824", "36849"},
+       {"32614", "32565", "32622", "45912", "36849", "36871", "36824"},
+       {"32622", "32614", "32565", "45912", "36824", "36849", "36871"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"147948", "148019", "147915", "208345", "167239", "167215", 
+        "167294"},
+       {"147915", "147948", "148019", "208345", "167294", "167239", 
+        "167215"},
+       {"148019", "147915", "147948", "208345", "167215", "167294", 
+        "167239"},
+       {"97801", "97801", "97801", "137736", "110544", "110544", "110544"},
+       {"69438", "69414", "69493", "97801", "78534", "78526", "78477"},
+       {"69493", "69438", "69414", "97801", "78477", "78534", "78526"},
+       {"69414", "69493", "69438", "97801", "78526", "78477", "78534"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"315130", "315242", "315258", "443882", "356364", "356260", 
+        "356293"},
+       {"315258", "315130", "315242", "443882", "356293", "356364", 
+        "356260"},
+       {"315242", "315258", "315130", "443882", "356260", "356293", 
+        "356364"},
+       {"208345", "208345", "208345", "293403", "235537", "235537", 
+        "235537"},
+       {"148019", "147915", "147948", "208345", "167215", "167294", 
+        "167239"},
+       {"147948", "148019", "147915", "208345", "167239", "167215", 
+        "167294"},
+       {"147915", "147948", "148019", "208345", "167294", "167239", "167215"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"671518", "671423", "671606", "945630", "759124", "759140", 
+        "759012"},
+       {"671606", "671518", "671423", "945630", "759012", "759124", 
+        "759140"},
+       {"671423", "671606", "671518", "945630", "759140", "759012", 
+        "759124"},
+       {"443882", "443882", "443882", "625035", "501748", "501748", 
+        "501748"},
+       {"315242", "315258", "315130", "443882", "356260", "356293", 
+        "356364"},
+       {"315130", "315242", "315258", "443882", "356364", "356260", 
+        "356293"},
+       {"315258", "315130", "315242", "443882", "356293", "356364", "356260"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1430746", "1430530", "1430547", "2014547", "1617053", "1617236", 
+        "1617148"},
+       {"1430547", "1430746", "1430530", "2014547", "1617148", "1617053", 
+        "1617236"},
+       {"1430530", "1430547", "1430746", "2014547", "1617236", "1617148", 
+        "1617053"},
+       {"945630", "945630", "945630", "1331646", "1068917", "1068917", 
+        "1068917"},
+       {"671423", "671606", "671518", "945630", "759140", "759012", 
+        "759124"},
+       {"671518", "671423", "671606", "945630", "759124", "759140", 
+        "759012"},
+       {"671606", "671518", "671423", "945630", "759012", "759124", "759140"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"3047783", "3047894", "3047583", "4291823", "3445077", "3445094", 
+        "3445293"},
+       {"3047583", "3047783", "3047894", "4291823", "3445293", "3445077", 
+        "3445094"},
+       {"3047894", "3047583", "3047783", "4291823", "3445094", "3445293", 
+        "3445077"},
+       {"2014547", "2014547", "2014547", "2836890", "2277276", "2277276", 
+        "2277276"},
+       {"1430530", "1430547", "1430746", "2014547", "1617236", "1617148", 
+        "1617053"},
+       {"1430746", "1430530", "1430547", "2014547", "1617053", "1617236", 
+        "1617148"},
+       {"1430547", "1430746", "1430530", "2014547", "1617148", "1617053", 
+        "1617236"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"6492677", "6493076", "6492971", "9143260", "7339717", "7339406", 
+        "7339606"},
+       {"6492971", "6492677", "6493076", "9143260", "7339606", "7339717", 
+        "7339406"},
+       {"6493076", "6492971", "6492677", "9143260", "7339406", "7339606", 
+        "7339717"},
+       {"4291823", "4291823", "4291823", "6043641", "4851437", "4851437", 
+        "4851437"},
+       {"3047894", "3047583", "3047783", "4291823", "3445094", "3445293", 
+        "3445077"},
+       {"3047783", "3047894", "3047583", "4291823", "3445077", "3445094", 
+        "3445293"},
+       {"3047583", "3047783", "3047894", "4291823", "3445293", "3445077", 
+        "3445094"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"13832377", "13832283", "13832793", "19478724", "15636336", 
+        "15636231", "15635937"},
+       {"13832793", "13832377", "13832283", "19478724", "15635937", 
+        "15636336", "15636231"},
+       {"13832283", "13832793", "13832377", "19478724", "15636231", 
+        "15635937", "15636336"},
+       {"9143260", "9143260", "9143260", "12875469", "10335464", "10335464", 
+        "10335464"},
+       {"6493076", "6492971", "6492677", "9143260", "7339406", "7339606", 
+        "7339717"},
+       {"6492677", "6493076", "6492971", "9143260", "7339717", "7339406", 
+        "7339606"},
+       {"6492971", "6492677", "6493076", "9143260", "7339606", "7339717", 
+        "7339406"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"29469024", "29468314", "29468619", "41497453", "33311007", 
+        "33311517", "33311101"},
+       {"29468619", "29469024", "29468314", "41497453", "33311101", 
+        "33311007", "33311517"},
+       {"29468314", "29468619", "29469024", "41497453", "33311517", 
+        "33311101", "33311007"},
+       {"19478724", "19478724", "19478724", "27429780", "22018729", 
+        "22018729", "22018729"},
+       {"13832283", "13832793", "13832377", "19478724", "15636231", 
+        "15635937", "15636336"},
+       {"13832377", "13832283", "13832793", "19478724", "15636336", 
+        "15636231", "15635937"},
+       {"13832793", "13832377", "13832283", "19478724", "15635937", 
+        "15636336", "15636231"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}], "}"}]], "Output",
+ CellChangeTimes->{{3.577484529848075*^9, 3.577484626244754*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"  ", 
+  GraphicsBox[
+   TagBox[RasterBox[CompressedData["
+1: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
+wYNHDcH/AzKk6Mo=
+     "], {{0, 196}, {220, 0}}, {0, 255},
+     ColorFunction->RGBColor],
+    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+    Selectable->False],
+   BaseStyle->"ImageGraphics",
+   ImageSize->{517., Automatic},
+   ImageSizeRaw->{220, 196},
+   PlotRange->{{0, 220}, {0, 196}}]}]], "Input",
+ CellChangeTimes->{{3.577481210651527*^9, 3.5774812136626997`*^9}, 
+   3.577481468457505*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.577484444311965*^9, 3.5774844445979633`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"1", ",", "7", ",", "4", ",", "5", ",", "2", ",", "6", ",", 
+  "3"}]], "Input",
+ CellChangeTimes->{{3.577484172207178*^9, 3.5774841942883244`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"MatrixPower", "[", 
+     RowBox[{
+      RowBox[{"(", GridBox[{
+         {"1", "0", "0", "0", "0", "0", "0"},
+         {"0", "0", "0", "0", "0", "0", "1"},
+         {"0", "0", "0", "1", "0", "0", "0"},
+         {"0", "0", "0", "0", "1", "0", "0"},
+         {"0", "1", "0", "0", "0", "0", "0"},
+         {"0", "0", "0", "0", "0", "1", "0"},
+         {"0", "0", "1", "0", "0", "0", "0"}
+        }], ")"}], ",", "i"}], "]"}], "//", "MatrixForm"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.577482995676571*^9, 3.5774830141950693`*^9}, {
+  3.5774830576928043`*^9, 3.577483082108193*^9}, {3.577483189524559*^9, 
+  3.577483213221767*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}], "}"}]], "Input",
+ CellChangeTimes->{{3.5774832440077353`*^9, 3.577483244029788*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Inverse", "[", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], "]"}], "//", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.577483792114324*^9, 3.5774838064256783`*^9}, {
+  3.5774839539269037`*^9, 3.577483968292626*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"MatrixPower", "[", 
+     RowBox[{
+      TagBox[
+       RowBox[{"(", "\[NoBreak]", GridBox[{
+          {"1", "0", "0", "0", "0", "0", "0"},
+          {"0", "0", "0", "1", "0", "0", "0"},
+          {"0", "1", "0", "0", "0", "0", "0"},
+          {"0", "0", "0", "0", "0", "0", "1"},
+          {"0", "0", "1", "0", "0", "0", "0"},
+          {"0", "0", "0", "0", "0", "1", "0"},
+          {"0", "0", "0", "0", "1", "0", "0"}
+         },
+         GridBoxAlignment->{
+          "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+           "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+         GridBoxSpacings->{"Columns" -> {
+             Offset[0.27999999999999997`], {
+              Offset[0.7]}, 
+             Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+             Offset[0.2], {
+              Offset[0.4]}, 
+             Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+       Function[BoxForm`e$, 
+        MatrixForm[BoxForm`e$]]], ",", "i"}], "]"}], "//", "MatrixForm"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.5774839841155*^9, 3.577484001019383*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]], ",", 
+   TagBox[
+    RowBox[{"(", "\[NoBreak]", GridBox[{
+       {"1", "0", "0", "0", "0", "0", "0"},
+       {"0", "1", "0", "0", "0", "0", "0"},
+       {"0", "0", "1", "0", "0", "0", "0"},
+       {"0", "0", "0", "1", "0", "0", "0"},
+       {"0", "0", "0", "0", "1", "0", "0"},
+       {"0", "0", "0", "0", "0", "1", "0"},
+       {"0", "0", "0", "0", "0", "0", "1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+        "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.4]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+    Function[BoxForm`e$, 
+     MatrixForm[BoxForm`e$]]]}], "}"}]], "Output",
+ CellChangeTimes->{3.577484001926017*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.577484162389697*^9, 3.577484163881822*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(", GridBox[{
+    {"6", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]", "\[Placeholder]", "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]", "\[Placeholder]", "7"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "1", 
+     "\[Placeholder]", "\[Placeholder]", "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "4", "\[Placeholder]", "\[Placeholder]"},
+    {"\[Placeholder]", "3", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]", "\[Placeholder]", "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]", "2", "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "5", "\[Placeholder]", 
+     "\[Placeholder]", "\[Placeholder]", "\[Placeholder]"}
+   }], ")"}]], "Input",
+ CellChangeTimes->{{3.577482854574106*^9, 3.577482943776395*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(", GridBox[{
+    {"6", "\[Placeholder]", "\[Placeholder]", "1", "\[Placeholder]", 
+     "\[Placeholder]", "7"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]", "\[Placeholder]", "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "4", "\[Placeholder]", "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "3", 
+     "\[Placeholder]", "\[Placeholder]", "2"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]", "\[Placeholder]", "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]", "\[Placeholder]", "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]", "\[Placeholder]", "5"}
+   }], ")"}]], "Input",
+ CellChangeTimes->{{3.5774823530044737`*^9, 3.577482353247849*^9}, {
+  3.577482662619508*^9, 3.5774826845087357`*^9}, {3.577482714972273*^9, 
+  3.577482762827841*^9}, {3.577482811679852*^9, 3.5774828504262*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GraphDistanceMatrix", "[", "g", "]"}], "//", 
+  "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.577481709991888*^9, 3.577481710630905*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0", "1", "2", "1", "2", "2", "1"},
+     {"2", "0", "1", "1", "1", "2", "2"},
+     {"1", "2", "0", "1", "2", "1", "2"},
+     {"2", "2", "2", "0", "1", "1", "1"},
+     {"2", "3", "1", "2", "0", "2", "3"},
+     {"1", "2", "3", "2", "3", "0", "2"},
+     {"3", "1", "2", "2", "2", "3", "0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.5774817263297853`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"HamiltonianCycles", "[", 
+  RowBox[{"g", ",", "All"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5774817429128027`*^9, 3.577481786785342*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "3", ",", "5", ",", "2", ",", "7", ",", "4", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "3", ",", "6", ",", "4", ",", "5", ",", "2", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "3", ",", "2", ",", "5", ",", "4", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "3", ",", "5", ",", "2", ",", "7", ",", "4"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "3", ",", "5", ",", "2", ",", "4", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "3", ",", "5", ",", "4", ",", "2", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "3", ",", "5", ",", "4", ",", "7", ",", "2"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "3", ",", "4", ",", "5", ",", "2", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "4", ",", "3", ",", "5", ",", "2", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "4", ",", "5", ",", "3", ",", "2", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "6", ",", "4", ",", "7", ",", "2", ",", "5", ",", "3"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "2", ",", "7", ",", "4", ",", "5", ",", "3", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "2", ",", "5", ",", "3", ",", "6", ",", "4", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "4", ",", "6", ",", "3", ",", "5", ",", "2", ",", "7"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "4", ",", "7", ",", "2", ",", "5", ",", "3", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "4", ",", "2", ",", "5", ",", "3", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "4", ",", "5", ",", "2", ",", "3", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "4", ",", "6", ",", "3", ",", "5", ",", "2"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "2", ",", "3", ",", "5", ",", "4", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "2", ",", "4", ",", "5", ",", "3", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "2", ",", "5", ",", "4", ",", "3", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "2", ",", "5", ",", "4", ",", "6", ",", "3"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "2", ",", "5", ",", "3", ",", "4", ",", "6"}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{
+     "1", ",", "7", ",", "2", ",", "5", ",", "3", ",", "6", ",", "4"}], 
+     "}"}]}], "}"}], "//", "Length"}]], "Input",
+ CellChangeTimes->{{3.5774818917171717`*^9, 3.577481893032835*^9}}],
+
+Cell[BoxData["24"], "Output",
+ CellChangeTimes->{3.577481894036306*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dd", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "3", ",", "5", ",", "2", ",", "7", ",", "4", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "3", ",", "6", ",", "4", ",", "5", ",", "2", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "3", ",", "2", ",", "5", ",", "4", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "3", ",", "5", ",", "2", ",", "7", ",", "4"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "3", ",", "5", ",", "2", ",", "4", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "3", ",", "5", ",", "4", ",", "2", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "3", ",", "5", ",", "4", ",", "7", ",", "2"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "3", ",", "4", ",", "5", ",", "2", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "4", ",", "3", ",", "5", ",", "2", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "4", ",", "5", ",", "3", ",", "2", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "6", ",", "4", ",", "7", ",", "2", ",", "5", ",", "3"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "2", ",", "7", ",", "4", ",", "5", ",", "3", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "2", ",", "5", ",", "3", ",", "6", ",", "4", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "4", ",", "6", ",", "3", ",", "5", ",", "2", ",", "7"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "4", ",", "7", ",", "2", ",", "5", ",", "3", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "4", ",", "2", ",", "5", ",", "3", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "4", ",", "5", ",", "2", ",", "3", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "4", ",", "6", ",", "3", ",", "5", ",", "2"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "2", ",", "3", ",", "5", ",", "4", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "2", ",", "4", ",", "5", ",", "3", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "2", ",", "5", ",", "4", ",", "3", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "2", ",", "5", ",", "4", ",", "6", ",", "3"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "2", ",", "5", ",", "3", ",", "4", ",", "6"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "7", ",", "2", ",", "5", ",", "3", ",", "6", ",", "4"}], 
+      "}"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.57748190362414*^9, 3.5774819129514103`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"c", "=", 
+  RowBox[{"FindHamiltonianCycle", "[", "g", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5774817993097*^9, 3.577481823752674*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4", ",", "1", ",", "6", ",", "3", ",", "5", ",", "2", ",", "7"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.577481812845626*^9, 3.577481824336068*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"GraphPlot", "[", 
+    RowBox[{"g", ",", 
+     RowBox[{"EdgeRenderingFunction", "\[Rule]", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"MemberQ", "[", 
+            RowBox[{
+             RowBox[{"Transpose", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"dd", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", 
+                RowBox[{"RotateRight", "[", 
+                 RowBox[{"dd", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}], "]"}], ",", 
+             "#2"}], "]"}], "||", 
+           RowBox[{"MemberQ", "[", 
+            RowBox[{
+             RowBox[{"Transpose", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"dd", "[", 
+                 RowBox[{"[", "i", "]"}], "]"}], ",", 
+                RowBox[{"RotateRight", "[", 
+                 RowBox[{"dd", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}], "]"}]}], "}"}], "]"}], ",", 
+             
+             RowBox[{"Reverse", "[", "#2", "]"}]}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Thickness", "[", ".01", "]"}], ",", 
+            RowBox[{"Line", "[", "#1", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", "#1", "]"}]}], "}"}]}], "]"}], "&"}], 
+       ")"}]}], ",", 
+     RowBox[{"VertexLabeling", "\[Rule]", "True"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "24"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.577481878827623*^9, 3.577481886626628*^9}, {
+  3.577481935731996*^9, 3.577481982882093*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    ImageSize->{Automatic, 574.0327213545194},
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]], ",", 
+   GraphicsBox[
+    TagBox[GraphicsGroupBox[{{
+        {GrayLevel[0], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {
+          0.36171915768546825`, 0.8563710769475218}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.9494173584135349, 
+          1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{1.491173783234895, 0.77577185027636}, {0.868117661906244, 
+          0.}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9947675185622993, 1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.36171915768546825`, 0.8563710769475218}, {0., 
+          1.7828832354183568`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          0.9494173584135349, 1.142087065295966}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9947675185622993, 1.7933948251147478`}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0., 
+          1.7828832354183568`}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {
+          1.9793146029956454`, 1.6431859317179975`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{0.9494173584135349, 1.142087065295966}, {0.868117661906244,
+           0.}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0., 1.7828832354183568`}, {0.9947675185622993, 
+          1.7933948251147478`}}]}, 
+        {GrayLevel[0], 
+         LineBox[{{1.9793146029956454`, 1.6431859317179975`}, {
+          1.491173783234895, 0.77577185027636}}]}, 
+        {RGBColor[1, 0, 0], Thickness[0.01], 
+         LineBox[{{0.868117661906244, 0.}, {0.36171915768546825`, 
+          0.8563710769475218}}]}}, 
+       GraphicsComplexBox[{{1.491173783234895, 0.77577185027636}, {
+        0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+        1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+        1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+        0.868117661906244, 0.}}, {InsetBox[
+          FrameBox["1",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 1], InsetBox[
+          FrameBox["2",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 2], InsetBox[
+          FrameBox["3",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 3], InsetBox[
+          FrameBox["4",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 4], InsetBox[
+          FrameBox["5",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 5], InsetBox[
+          FrameBox["6",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 6], InsetBox[
+          FrameBox["7",
+           Background->RGBColor[1, 1, 0.8],
+           FrameStyle->RGBColor[0.94, 0.85, 0.36],
+           StripOnInput->False], 7]}]},
+      ContentSelectable->True],
+     Annotation[#, 
+      VertexCoordinateRules -> {{1.491173783234895, 0.77577185027636}, {
+       0.36171915768546825`, 0.8563710769475218}, {0.9947675185622993, 
+       1.7933948251147478`}, {0.9494173584135349, 1.142087065295966}, {0., 
+       1.7828832354183568`}, {1.9793146029956454`, 1.6431859317179975`}, {
+       0.868117661906244, 0.}}]& ],
+    AspectRatio->Automatic,
+    FrameTicks->None,
+    ImageSize->{Automatic, 487.1862806497195},
+    PlotRange->All,
+    PlotRangePadding->Scaled[0.1]]}], "}"}]], "Output",
+ CellChangeTimes->{{3.577481984555982*^9, 3.577481995178467*^9}, 
+   3.5774820385956087`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(", GridBox[{
+    {"1", "\[Placeholder]", "1", "\[Placeholder]", "1"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "1", 
+     "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "1", "\[Placeholder]", "1"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "\[Placeholder]"},
+    {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+     "1"}
+   }], ")"}]], "Input",
+ CellChangeTimes->{{3.5774820969765263`*^9, 3.577482179124425*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"tf", "[", "x_", "]"}], ":=", 
+  TagBox[GridBox[{
+     {"\[Piecewise]", GridBox[{
+        {"1", 
+         RowBox[{"x", "\[Equal]", "True"}]},
+        {"0", 
+         RowBox[{"x", "\[Equal]", "False"}]}
+       },
+       AllowedDimensions->{2, Automatic},
+       Editable->True,
+       GridBoxAlignment->{
+        "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}},
+          "RowsIndexed" -> {}},
+       GridBoxItemSize->{
+        "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+         "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.84]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}},
+       Selectable->True]}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxItemSize->{
+     "Columns" -> {{Automatic}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.35]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}],
+   "Piecewise",
+   DeleteWithContents->True,
+   Editable->False,
+   SelectWithContents->True,
+   Selectable->False]}]], "Input",
+ CellChangeTimes->{{3.577483652459306*^9, 3.577483673516515*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GroupMultiplicationTable", "[", 
+   RowBox[{"SymmetricGroup", "[", "7", "]"}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.577483298852188*^9, 3.5774833248962107`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"A", "=", 
+   RowBox[{"GroupElements", "[", 
+    RowBox[{"SymmetricGroup", "[", "7", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.577483416996478*^9, 3.577483451110341*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"i", ",", 
+     RowBox[{"tf", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"PermutationProduct", "[", 
+          RowBox[{
+           RowBox[{"A", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"A", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"A", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"A", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"A", "[", 
+            RowBox[{"[", "i", "]"}], "]"}]}], "]"}], "\[Equal]", 
+         RowBox[{"Cycles", "[", 
+          RowBox[{"{", "}"}], "]"}]}], ")"}], "&&", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"A", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "!=", 
+         RowBox[{"Cycles", "[", 
+          RowBox[{"{", "}"}], "]"}]}], ")"}]}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"i", ",", "1", ",", "5040"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.57748345242909*^9, 3.5774834553175507`*^9}, {
+  3.577483518084367*^9, 3.57748363757344*^9}, {3.577483678186673*^9, 
+  3.577483682789227*^9}}],
+
+Cell[BoxData[
+ RowBox[{"FindPermutation", "[", 
+  RowBox[{
+   RowBox[{"Range", "[", "7", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "7", ",", "4", ",", "5", ",", "2", ",", "6", ",", "3"}],
+     "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.577484207786908*^9, 3.577484236457852*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"perm", "=", 
+  RowBox[{"Cycles", "[", 
+   RowBox[{"{", 
+    RowBox[{"{", 
+     RowBox[{"2", ",", "5", ",", "4", ",", "3", ",", "7"}], "}"}], "}"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5774842836718273`*^9, 3.5774842845685472`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Cycles", "[", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "5", ",", "4", ",", "3", ",", "7"}], "}"}], "}"}], 
+  "]"}]], "Output",
+ CellChangeTimes->{3.577484284990631*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"rules", "[", "cycle_", "]"}], ":=", 
+   RowBox[{"Thread", "[", 
+    RowBox[{"DirectedEdge", "[", 
+     RowBox[{"cycle", ",", 
+      RowBox[{"RotateLeft", "[", "cycle", "]"}]}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Flatten", "[", 
+  RowBox[{"rules", "/@", 
+   RowBox[{"First", "[", "perm", "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.5774842737550087`*^9, 3.577484274210709*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"2", "\[DirectedEdge]", "5"}], ",", 
+   RowBox[{"5", "\[DirectedEdge]", "4"}], ",", 
+   RowBox[{"4", "\[DirectedEdge]", "3"}], ",", 
+   RowBox[{"3", "\[DirectedEdge]", "7"}], ",", 
+   RowBox[{"7", "\[DirectedEdge]", "2"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.577484275912755*^9, 3.577484285893051*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Graph", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.577484290607094*^9, 3.577484314746602*^9}}],
+
+Cell[BoxData[
+ RowBox[{"GraphPlot", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"2", "\[Rule]", "5"}], ",", 
+     RowBox[{"5", "\[Rule]", "4"}], ",", 
+     RowBox[{"4", "\[Rule]", "3"}], ",", 
+     RowBox[{"3", "\[Rule]", "7"}], ",", 
+     RowBox[{"7", "\[Rule]", "2"}]}], "}"}], ",", 
+   RowBox[{"VertexLabeling", "\[Rule]", "True"}], ",", 
+   RowBox[{"DirectedEdges", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.577484328365574*^9, 3.577484346528882*^9}}]
+},
+WindowSize->{1663, 927},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit) (November 6, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 164, 3, 27, "Input"],
+Cell[CellGroupData[{
+Cell[746, 27, 759, 19, 27, "Input"],
+Cell[1508, 48, 695, 18, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2240, 71, 911, 22, 27, "Input"],
+Cell[3154, 95, 2309, 50, 341, "Output"]
+}, Open  ]],
+Cell[5478, 148, 1026, 23, 27, "Input"],
+Cell[6507, 173, 1102, 28, 125, InheritFromParent],
+Cell[7612, 203, 417, 10, 125, "Input"],
+Cell[8032, 215, 92, 1, 27, InheritFromParent],
+Cell[CellGroupData[{
+Cell[8149, 220, 1368, 39, 27, "Input"],
+Cell[9520, 261, 25982, 602, 780, "Output"]
+}, Open  ]],
+Cell[35517, 866, 15633, 262, 478, "Input"],
+Cell[51153, 1130, 94, 1, 27, "Input"],
+Cell[51250, 1133, 170, 3, 27, "Input"],
+Cell[51423, 1138, 774, 19, 125, "Input"],
+Cell[52200, 1159, 5346, 135, 125, InheritFromParent],
+Cell[57549, 1296, 1073, 26, 125, "Input"],
+Cell[CellGroupData[{
+Cell[58647, 1326, 1236, 31, 125, InheritFromParent],
+Cell[59886, 1359, 8805, 223, 125, "Output"]
+}, Open  ]],
+Cell[68706, 1585, 92, 1, 27, "Input"],
+Cell[68801, 1588, 1001, 17, 125, "Input"],
+Cell[69805, 1607, 1147, 19, 121, "Input"],
+Cell[CellGroupData[{
+Cell[70977, 1630, 174, 4, 27, "Input"],
+Cell[71154, 1636, 889, 23, 137, "Output"]
+}, Open  ]],
+Cell[72058, 1662, 163, 3, 27, "Input"],
+Cell[CellGroupData[{
+Cell[72246, 1669, 3079, 100, 58, InheritFromParent],
+Cell[75328, 1771, 71, 1, 27, "Output"]
+}, Open  ]],
+Cell[75414, 1775, 3212, 101, 58, "Input"],
+Cell[CellGroupData[{
+Cell[78651, 1880, 160, 3, 27, "Input"],
+Cell[78814, 1885, 192, 4, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[79043, 1894, 1762, 46, 58, "Input"],
+Cell[80808, 1942, 101281, 2190, 1476, "Output"]
+}, Open  ]],
+Cell[182104, 4135, 535, 11, 91, "Input"],
+Cell[182642, 4148, 1626, 45, 45, "Input"],
+Cell[184271, 4195, 222, 5, 27, "Input"],
+Cell[184496, 4202, 217, 5, 27, "Input"],
+Cell[184716, 4209, 1199, 33, 27, "Input"],
+Cell[185918, 4244, 294, 7, 27, "Input"],
+Cell[CellGroupData[{
+Cell[186237, 4255, 264, 7, 27, InheritFromParent],
+Cell[186504, 4264, 207, 6, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[186748, 4275, 454, 12, 43, "Input"],
+Cell[187205, 4289, 359, 8, 27, "Output"]
+}, Open  ]],
+Cell[187579, 4300, 248, 5, 27, "Input"],
+Cell[187830, 4307, 491, 12, 27, InheritFromParent]
+}
+]
+*)
+
+(* End of internal cache information *)
+
